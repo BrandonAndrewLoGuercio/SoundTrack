@@ -1,7 +1,12 @@
+
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
 <p id="notice"><%= notice %></p>
 <h1>User Home</h1>
 <h2>Listing Posts</h2>
-git a
+
 <table>
   <thead>
     <tr>
@@ -12,9 +17,9 @@ git a
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><a class="btn icon-btn btn-info"<%= link_to 'Show', post %></a></td>
+        <td><a class="btn icon-btn btn-warning"<%= link_to 'Edit', edit_post_path(post) %></a></td>
+        <td><a class="btn icon-btn btn-danger"<%= link_to 'Remove', post, method: :delete, data: { confirm: 'Are you sure?' } %></a></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +27,16 @@ git a
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<a class="btn icon-btn btn-success" <%= link_to'New Post', new_post_path%> </a>
+
+<div class="container">
+  <hr>
+  <div class="text-center center-block">
+    <a href="https://www.facebook.com"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+    <a href="https://twitter.com"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+    <a href="https://plus.google.com"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+    <a href="mailto:"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+  </div>
+  <hr>
+</div>
+
