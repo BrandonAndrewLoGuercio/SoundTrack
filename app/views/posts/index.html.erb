@@ -47,34 +47,32 @@
 
 
 
+<div class="container">
 
+  <p id="notice"><%= notice %></p>
+  <h1 class="lead">User Home</h1>
+  <h2>Listing Posts</h2>
 
-<p id="notice"><%= notice %></p>
-<h1>User Home</h1>
-<h2>Listing Posts</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
+  <table>
+    <thead>
       <tr>
-        <td><a class="btn icon-btn btn-info"<%= link_to 'Show', post %></a></td>
-        <td><a class="btn icon-btn btn-warning"<%= link_to 'Edit', edit_post_path(post) %></a></td>
-        <td><a class="btn icon-btn btn-danger"<%= link_to 'Remove', post, method: :delete, data: { confirm: 'Are you sure?' } %></a></td>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<a class="btn icon-btn btn-success" <%= link_to'New Post', new_post_path%> </a>
-
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><a class="btn icon-btn btn-info"<%= link_to 'Show', post %></a></td>
+          <td><a class="btn icon-btn btn-warning"<%= link_to 'Edit', edit_post_path(post) %></a></td>
+          <td><a class="btn icon-btn btn-danger"<%= link_to 'Remove', post, method: :delete, data: { confirm: 'Are you sure?' } %></a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <a class="btn icon-btn btn-success" <%= link_to'New Post', new_post_path%> </a>
+</div>
 <div class="container">
   <hr>
   <div class="text-center center-block">
