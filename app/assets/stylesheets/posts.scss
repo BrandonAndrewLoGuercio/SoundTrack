@@ -1,4 +1,44 @@
 
+body
+{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.fb-profile img.fb-image-lg{
+  z-index: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.fb-image-profile
+{
+  margin: -90px 10px 0px 50px;
+  z-index: 9;
+  width: 20%;
+}
+
+@media (max-width:768px)
+{
+
+  .fb-profile-text>h1{
+    font-weight: 700;
+    font-size:16px;
+  }
+
+  .fb-image-profile
+  {
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%;
+  }
+}
+
+
+
+
+
+
+
 .navbar-brand { position: relative; z-index: 2; }
 
 .navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
@@ -81,7 +121,9 @@
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
 }
-
+/*
+    Only Needed in Multi-Coloured Variation
+                                               */
 .social-fb:hover {
   color: #3B5998;
 }
@@ -93,4 +135,15 @@
 }
 .social-em:hover {
   color: #f39c12;
+}body {
+   background-color: #222;
+   color: #ccc;
+ }
+/* remove defaults from responsive cols */
+
+.nopadding {
+  padding: 2px !important;
+  margin: 0 !important;
+  outline: 2px solid #333;
+  background: #333;
 }
