@@ -1,0 +1,149 @@
+
+body
+{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.fb-profile img.fb-image-lg{
+  z-index: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.fb-image-profile
+{
+  margin: -90px 10px 0px 50px;
+  z-index: 9;
+  width: 20%;
+}
+
+@media (max-width:768px)
+{
+
+  .fb-profile-text>h1{
+    font-weight: 700;
+    font-size:16px;
+  }
+
+  .fb-image-profile
+  {
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%;
+  }
+}
+
+
+
+
+
+
+
+.navbar-brand { position: relative; z-index: 2; }
+
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
+
+.navbar .navbar-collapse { position: relative; overflow: hidden !important; }
+.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px; }
+
+.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 80px; width: 100%; }
+.navbar.navbar-default .nav-collapse { background-color: #f8f8f8; }
+.navbar.navbar-inverse .nav-collapse { background-color: #222; }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-outline { background-color: transparent; }
+
+.navbar-nav.navbar-right .btn:not(.collapsed) {
+  background-color: rgb(111, 84, 153);
+  border-color: rgb(111, 84, 153);
+  color: rgb(255, 255, 255);
+}
+
+.navbar.navbar-default .nav-collapse,
+.navbar.navbar-inverse .nav-collapse {
+  height: auto !important;
+  transition: transform 0.3s;
+  transform: translate(0px,-50px);
+}
+.navbar.navbar-default .nav-collapse.in,
+.navbar.navbar-inverse .nav-collapse.in {
+  transform: translate(0px,0px);
+}
+
+
+@media screen and (max-width: 767px) {
+  .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; }
+
+  .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+  .navbar .nav-collapse .navbar-form { margin: 0; }
+  .nav-collapse>li { float: none; }
+
+  .navbar.navbar-default .nav-collapse,
+  .navbar.navbar-inverse .nav-collapse {
+    transform: translate(-100%,0px);
+  }
+  .navbar.navbar-default .nav-collapse.in,
+  .navbar.navbar-inverse .nav-collapse.in {
+    transform: translate(0px,0px);
+  }
+
+  .navbar.navbar-default .nav-collapse.slide-down,
+  .navbar.navbar-inverse .nav-collapse.slide-down {
+    transform: translate(0px,-100%);
+  }
+  .navbar.navbar-default .nav-collapse.in.slide-down,
+  .navbar.navbar-inverse .nav-collapse.in.slide-down {
+    transform: translate(0px,0px);
+  }
+}
+
+
+
+
+
+
+.btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
+.icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
+
+#social:hover {
+  -webkit-transform:scale(1.1);
+  -moz-transform:scale(1.1);
+  -o-transform:scale(1.1);
+}
+#social {
+  -webkit-transform:scale(0.8);
+  /* Browser Variations: */
+  -moz-transform:scale(0.8);
+  -o-transform:scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+/*
+    Only Needed in Multi-Coloured Variation
+                                               */
+.social-fb:hover {
+  color: #3B5998;
+}
+.social-tw:hover {
+  color: #4099FF;
+}
+.social-gp:hover {
+  color: #d34836;
+}
+.social-em:hover {
+  color: #f39c12;
+}body {
+   background-color: #222;
+   color: #ccc;
+ }
+/* remove defaults from responsive cols */
+
+.nopadding {
+  padding: 2px !important;
+  margin: 0 !important;
+  outline: 2px solid #333;
+  background: #333;
+}
