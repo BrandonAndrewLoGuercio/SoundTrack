@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(version: 20150615175632) do
   add_index "follows", ["follower_id"], name: "index_follows_on_follower_id", using: :btree
   add_index "follows", ["following_id"], name: "index_follows_on_following_id", using: :btree
 
+  create_table "posts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
