@@ -25,7 +25,7 @@
         <% end %>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Profile', edit_user_registration_path(current_user) %></li> <!-- link_to current_user.avatar(:nav), user_path(current_user) -->
+        <li><%= link_to (image_tag current_user.avatar_url(:nav).to_s), edit_user_registration_path(current_user) %></li> <!-- link_to current_user.avatar(:nav), user_path(current_user) -->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
