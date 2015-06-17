@@ -1,0 +1,7 @@
+<% if current_user %>
+<%= form_for Relationship.new do |f| %>
+    <input type="hidden" value="<%= current_user.id %>" name="relationship[follower_id]">
+    <input type="hidden" value="<%= user.id %>" name="relationship[following_id]">
+    <%= f.submit "Follow" %>
+<% end %>
+<% end %>

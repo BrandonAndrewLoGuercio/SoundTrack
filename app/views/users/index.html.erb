@@ -1,0 +1,25 @@
+<!doctype html>
+
+    <%= form_tag users_path, :method => 'get', :id => 'users_search' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Users</title>
+</head>
+
+<body>
+<ul>
+  <% @users.each do |user|%>
+      <li>
+        <%= link_to user.username %>
+        <%= follow_or_unfollow_button user %>
+  <% end %>
+</ul>
+</body>
+</html>
