@@ -7,6 +7,8 @@ class WelcomeController < ApplicationController
     @posts = Post.all
     @follower_relationships = Relationship.where(following_id: current_user).all
     @following_relationships = Relationship.where(follower_id: current_user).all
+    @user = User.find(current_user)
+    @headline = Headline.find_by(user_id: current_user.id)
   end
 
   # GET /posts/1
