@@ -1,11 +1,6 @@
 <!doctype html>
 
-    <%= form_tag users_path, :method => 'get', :id => 'users_search' do %>
-      <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :name => nil %>
-      </p>
-    <% end %>
+<%= render 'shared/search' %>
 
 <html lang="en">
 <head>
@@ -17,7 +12,7 @@
 <ul>
   <% @users.each do |user|%>
       <li>
-        <%= link_to user.username %>
+        <%= link_to user.username, user_path(user) %>
         <%= follow_or_unfollow_button user %>
   <% end %>
 </ul>
