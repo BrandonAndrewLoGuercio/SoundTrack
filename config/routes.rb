@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   resources :posts
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   resources :users
   resources :relationships
+
+  # devise_scope :user do
+  #   get 'sign_out', to: 'devise/session#destroy', :as => :destroy_user_session
+  # end
 
   match('relationship/:follower_id/:following_id', {via: :delete, to: "relationships#destroy_via_users", as: "destroy_users_relationship"})
   # The priority is based upon order of creation: first created -> highest priority.
