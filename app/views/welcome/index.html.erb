@@ -5,7 +5,8 @@
     <title>SoundTrack</title>
   </head>
   <body>
-    <h1>SoundTrack!</h1>
+  <div class="container">
+  <h1>SoundTrack!</h1>
     <% if user_signed_in? %>
       <%= image_tag current_user.avatar_url.to_s  %><br><br>
       <h3>Welcome back <%= current_user.username %>!</h3>
@@ -20,5 +21,6 @@
         <li><%= link_to 'Sign in', new_user_session_path %></li>
       </ul>
   <% end %>
+  </div>
   </body>
 </html>
