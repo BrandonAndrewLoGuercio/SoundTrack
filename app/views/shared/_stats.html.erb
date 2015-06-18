@@ -1,14 +1,14 @@
 <%# @user ||= current_user %>
 <div class="stats">
-    following:
-    <strong id="following" class="stat">
-      <%= @following_relationships.count %>
-    </strong>
+  <a href="/following">
+    <span>Following:</span>
+    <strong><%= @following_relationships.count %></strong>
+  </a>
 
-    followers:
-    <strong id="followers" class="stat">
-      <%= @follower_relationships.count %>
-    </strong>
 
+  <a href="/followers">
+    <span>Followers:</span>
+    <strong><%= @follower_relationships.count %></strong>
+  </a>
 
 </div>
