@@ -8,10 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <%= render 'shared/navigation' %>
 
-<%= render 'shared/navigation' %>
+  <%= yield %>
 
-<%= yield %>
-
+  <div class="container">
+    <%= render 'shared/footer' %>
+  </div>
 </body>
 </html>
