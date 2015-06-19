@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  validates_uniqueness_of :username,
+  validates_uniqueness_of :username
   validates_presence_of :username, :password
   mount_uploader :avatar, AvatarUploader
 
