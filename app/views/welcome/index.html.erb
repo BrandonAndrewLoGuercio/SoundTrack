@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>SoundTrack</title>
-  </head>
-  <body>
     <h1>SoundTrack!</h1>
     <% if user_signed_in? %>
         <% if false && current_user.avatar.present? #TODO when avtar is working %>
@@ -20,8 +13,8 @@
       <ul>
         <li><%= link_to 'Sign up', new_user_registration_path %></li>
         <li><%= link_to 'Sign in', new_user_session_path %></li>
-        <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+        <%= link_to user_omniauth_authorize_path(:facebook) do %>
+        <%= image_tag "signin-facebook-large.png" %>
+        <% end %>
       </ul>
   <% end %>
-  </body>
-</html>
