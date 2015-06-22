@@ -23,7 +23,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'validates uniqueness of username' do
-    @user1 = build(:user, username: @user.username, email:'foo@example.com')
+    @user1 = build(:user, username: @user.username)
     expect {@user1.save!}.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Username has already been taken")
 
     @user2 = build(:user)
