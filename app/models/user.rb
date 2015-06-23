@@ -11,6 +11,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
   validates_uniqueness_of :username
 
+
+  def admin?
+    admin
+  end
+
+
   def self.search(username)
     if username
       username.downcase!
