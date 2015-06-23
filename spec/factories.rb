@@ -6,9 +6,9 @@ FactoryGirl.define do
   end
 
   factory :post, :class => 'Post' do
-    # user = create(:user)
+    user = create(:user)
     sequence(:message) { |n| "post#{n}" }
-    # user_id user
+    user_id user
   end
 
 end

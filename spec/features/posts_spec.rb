@@ -1,14 +1,18 @@
 require 'rails_helper'
 
 describe "submitting a new post" do
+  before :each do
+    @user = create(:user)
+  end
+
   it "allows a signed in user to post" do
-    # login_success(@user)
+    login_success(@user)
     visit root_path
     click_on 'New Post'
     expect(current_path).to eq new_post_path
     fill_in text_area, :with => 'new post'
     click_on 'Create Post'
-    @post = Post.create(:message => 'new post', :user_id => user.id)
+    @post = Post.create(:message => 'new post')
     expect(current_path).to eq post_path(@post)
     expect(page).to have_content 'Post was successfully created.'
   end
@@ -25,9 +29,9 @@ end
 describe "editing an existing post" do
   before :each do
     user = create(:user)
-    #login_success(@user)
-    @post1 = create(:post, :user_id => user.id)
-    @post2 = create(:post, :user_id => user.id)
+    login_success(@user)
+    @post1 = create(:post)
+    @post2 = create(:post)
   end
 
   it "allows a signed in user to edit an existing post from show post page" do

@@ -1,6 +1,5 @@
 module PostHelper
 
-
   def post_success
     click_on 'New Post'
     expect(current_path).to eq new_post_path

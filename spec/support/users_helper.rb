@@ -14,7 +14,7 @@ module UserHelper
     click_button 'Log in'
   end
 
-  def signup_page
+  def go_to_signup_page
     visit root_path
     click_link 'Sign up'
   end
