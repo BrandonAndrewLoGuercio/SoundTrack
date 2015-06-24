@@ -21,20 +21,22 @@ describe "using the navigation bar" do
   end
 
   it "brings user to welcome page" do
-    click_on 'Soundtrack'
+    visit root_path
+    find('.navbar-brand').click
     expect(current_path).to eq root_path
   end
 
   it "brings signed in user to their profile page" do
     login_success(@user)
     visit root_path
-    click_on @user.avatar
+    find('li.avatar').click
     expect(current_path).to eq user_path(@user)
   end
 
   it "allows guest or user to search for other users" do
     user1 = create(:user, :username => 'searchable')
-    fill_in :search, with 'searcha'
+    visit root_path
+    fill_in 'Search users', :with => 'searcha'
     click_on 'Search'
     expect(page).to have_content 'searchable'
     #page.should have_css('navbar-fixed-top')
