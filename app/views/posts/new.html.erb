@@ -2,10 +2,10 @@
 <div class="container-fluid">
   <% if !user_signed_in? %>
       <div class="jumbotron">
-        <h1>You're not signed in sucka!</h1>
+        <h1>Sign in sucka!</h1>
         <p>words and stuff and shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
-        <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
-        <p><%= link_to 'Sign in', new_user_session_path, class: "btn btn-primary btn-lg" %></p>
+        <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-block" %></p>
+        <p><%= link_to 'Sign in', new_user_session_path, class: "btn btn-info btn-block" %></p>
       </div>
   <% end %>
 </div>
