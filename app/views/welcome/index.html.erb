@@ -14,13 +14,11 @@
         <li><%= link_to 'Sign up', new_user_registration_path %></li>
         <li><%= link_to 'Sign in', new_user_session_path %></li>
         <%= link_to user_omniauth_authorize_path(:facebook) do %>
-        <%= image_tag "signin-facebook-large.png" %>
+        <%= image_tag "facebook_button.png" %>
         <% end %>
       </ul>
   <% end %>
 
-    <!doctype html>
-    <html>
     <table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
       <tr>
         <td class="thead" width="100%">
@@ -44,4 +42,3 @@
         </td>
       </tr>
     </table>
-    </html>
