@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   match('/following', {via: :get, to: "following#index"})
   match('/followers', {via: :get, to: "followers#index"})
 
+  # For yourub
+  get 'videos/index'
+  post 'videos/index'
+  get 'videos/:id' => 'videos#details', as: :details
+
 
   match('relationship/:follower_id/:following_id', {via: :delete, to: "relationships#destroy_via_users", as: "destroy_users_relationship"})
   # The priority is based upon order of creation: first created -> highest priority.
