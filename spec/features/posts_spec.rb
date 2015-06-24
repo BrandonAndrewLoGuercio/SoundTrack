@@ -15,12 +15,9 @@ describe "submitting a new post" do
     expect(page).to have_content 'Post was successfully created.'
   end
 
-  it "redirects users who are not logged in to log in page" do
+  it "does not allow guest to post" do
     visit root_path
-    click_on 'New Post'
-    expect(current_path).to eq new_user_session_path
-    expect(page).to have_content 'Log in'
-    expect(page).to_not have_content 'Create Post'
+    expect(page).to_not have_content 'New Post'
   end
 end
 
