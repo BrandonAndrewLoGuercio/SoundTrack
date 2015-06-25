@@ -15,35 +15,38 @@
 @import "bootstrap";
 //@import "posts";
 
-body {
-  padding-top: 80px;
-}
 
+
+body {
+  height: 100%;
+  padding-top: 50px;
+  margin-bottom: 0;
+}
 .search {
   margin-top: 20px;
 }
 
 .post {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .navbar-brand {
-  margin-top: 10px;
+  //margin-top: 5px;
 }
 
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+  background-color: #222222;
+  margin: -10px 0 -10px 0;
   border-top: 2px solid #eaeaea;
-  color:#999;
+  color: #000000;
 }
 footer a {
-  color: #555;
+  color: #222222;
 }
 footer a:hover {
-  color: #222;
+  color: #27868b;
 }
 footer small {
   float: left;
@@ -70,14 +73,11 @@ footer ul li {
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
 }
-
-
-
-
-
-
-
-
-
-
+.jumbotron#background2{
+  background: url("musicbackground.png") no-repeat center center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
 
