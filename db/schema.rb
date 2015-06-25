@@ -54,7 +54,12 @@ ActiveRecord::Schema.define(version: 20150616174447) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "username"
-    t.string   "avatar"
+    t.string   "avatar",                 default: "---\n:default: \n"
+    t.string   "profile"
+    t.boolean  "public?"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

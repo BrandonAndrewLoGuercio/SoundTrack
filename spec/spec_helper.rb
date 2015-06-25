@@ -16,10 +16,20 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'devise'
+require 'capybara/rspec'
+require 'support/user_helper'
+require 'support/posts_helper'
+
 RSpec.configure do |config|
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
+  config.include Devise::TestHelpers, :type => :controller
+  # config.include FactoryGirl::Syntax::Methods
+  config.include PostHelper
+  config.include UserHelper
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods

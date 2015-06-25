@@ -2,11 +2,10 @@ require 'rails_helper'
 
 describe User do
   before :each do
-    @user1 = User.create email: "user1@foo.com", password: 'foobarbaz'
-    @user2 = User.create email: "user2@foo.com", password: 'foobarbaz'
-    @user3 = User.create email: "user3@foo.com", password: "foobarbaz"
-    @user4 = User.create email: "user4@foo.com", password: "foobarbaz"
-
+    @user1 = create(:user)
+    @user2 = create(:user)
+    @user3 = create(:user)
+    @user4 = create(:user)
   end
 
   it "should not have followers when first created" do

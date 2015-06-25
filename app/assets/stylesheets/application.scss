@@ -16,59 +16,68 @@
 //@import "posts";
 
 body {
-  padding-top: 80px;
+  height: 100%;
+  padding-top: 50px;
+  margin-bottom: 0;
+  background-color: #151515;
+}
+.search {
+  margin-top: 12px;
 }
 
-.search {
-  margin-top: 20px;
-}
 
 .post {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .navbar-brand {
-  margin-top: 10px;
+  //margin-top: 5px;
 }
 
 /* footer */
 
-footer {
-  margin-top: 45px;
+#footer {
+  border-top: 2px solid #aaaeb1;
+  background-color: #cbd0d3;
+  margin: 0 0 -15px 0;
   padding-top: 5px;
-  border-top: 2px solid #eaeaea;
-  color:#999;
 }
-footer a {
-  color: #555;
+#footer a {
+  color: #222222;
 }
-footer a:hover {
-  color: #222;
+#footer a:hover {
+  color: #27868b;
 }
-footer small {
+#footer small {
   float: left;
   font-size: 15px;
 }
-footer ul {
+#footer ul {
   float: right;
   list-style: none;
 };
 
-footer ul li {
+#footer ul li {
   float: left;
   margin-left: 20px;
 }
+.jumbotron {
+  background: rgb(225, 225, 225); /* This is for ie8 and below */
+  background: rgba(225, 225, 225, 0.5);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.jumbotron#background{
+  background: url("music.png") no-repeat center center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.container#background2{
+  background: url("music.png") no-repeat center center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
 
