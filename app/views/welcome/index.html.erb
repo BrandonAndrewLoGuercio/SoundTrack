@@ -15,9 +15,11 @@
           <p><%= link_to 'Sign in', new_user_session_path, class: "btn btn-primary btn-block" %></p>
         </div>
       <% end %>
+
+      <div class="container" id="background2">
+      </div>
+
     </div>
-<div class="jumbotron", id="background2">
-     </div>
 
   <div class="container">
     <% if user_signed_in? %>
@@ -26,12 +28,12 @@
       <h3>Welcome back <%= current_user.username %>!</h3>
       <ul>
         <li><%= link_to 'Follow People', users_path %></li>
-
       </ul>
   <% else %>
     <!--<%= render 'landingpage' %>-->
   <% end %>
   </div>
   </div>
+
   </body>
 <!--</html>-->
