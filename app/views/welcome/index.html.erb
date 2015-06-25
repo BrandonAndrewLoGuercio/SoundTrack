@@ -5,10 +5,23 @@
     <title>SoundTrack</title>
   </head>
   <body>
+   <div class="jumbotron" id="background">
+    <div class="container-fluid">
+      <% if !user_signed_in? %>
+        <div class="jumbotron">
+          <h1>Create your SoundTrack</h1>
+          <p>Music and filler words and stuff and shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
+          <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-info btn-block" %></p>
+          <p><%= link_to 'Sign in', new_user_session_path, class: "btn btn-primary btn-block" %></p>
+        </div>
+      <% end %>
+    </div>
+<div class="jumbotron", id="background2">
+     </div>
+
   <div class="container">
-  <h1>SoundTrack!</h1>
     <% if user_signed_in? %>
-      <%= render 'homefeed' %>
+      <%= render 'welcome/homefeed' %>
       <%= image_tag current_user.avatar_url.to_s  %><br><br>
       <h3>Welcome back <%= current_user.username %>!</h3>
       <ul>
@@ -16,8 +29,9 @@
 
       </ul>
   <% else %>
-    <%= render 'landingpage' %>
+    <!--<%= render 'landingpage' %>-->
   <% end %>
+  </div>
   </div>
   </body>
 <!--</html>-->
