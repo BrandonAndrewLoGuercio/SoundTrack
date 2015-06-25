@@ -4,6 +4,14 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   resources :users
   resources :relationships
+  match('/following', {via: :get, to: "following#index"})
+  match('/followers', {via: :get, to: "followers#index"})
+
+  # For yourub
+  get 'videos/index'
+  post 'videos/index'
+  get 'videos/:id' => 'videos#details', as: :details
+
 
   # devise_scope :user do
   #   get 'sign_out', to: 'devise/session#destroy', :as => :destroy_user_session
@@ -14,6 +22,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  get 'welcome/index'
   root 'welcome#index'
 
   # Example of regular route:

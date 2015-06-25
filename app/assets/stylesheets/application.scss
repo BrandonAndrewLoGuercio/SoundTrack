@@ -13,4 +13,71 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "posts";
+//@import "posts";
+
+
+
+body {
+  height: 100%;
+  padding-top: 50px;
+  margin-bottom: 0;
+}
+.search {
+  margin-top: 20px;
+}
+
+.post {
+  margin-top: 5px;
+}
+
+.navbar-brand {
+  //margin-top: 5px;
+}
+
+/* footer */
+
+footer {
+  background-color: #222222;
+  margin: -10px 0 -10px 0;
+  border-top: 2px solid #eaeaea;
+  color: #000000;
+}
+footer a {
+  color: #222222;
+}
+footer a:hover {
+  color: #27868b;
+}
+footer small {
+  float: left;
+  font-size: 15px;
+}
+footer ul {
+  float: right;
+  list-style: none;
+};
+
+footer ul li {
+  float: left;
+  margin-left: 20px;
+}
+.jumbotron {
+  background: rgb(225, 225, 225); /* This is for ie8 and below */
+  background: rgba(225, 225, 225, 0.5);
+}
+
+.jumbotron#background{
+  background: url("music.png") no-repeat center center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.jumbotron#background2{
+  background: url("musicbackground.png") no-repeat center center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+

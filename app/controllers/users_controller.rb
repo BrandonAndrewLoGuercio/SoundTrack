@@ -9,6 +9,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = User.search(params[:search])
+    @user = User.find(params[:id])
   end
 end
