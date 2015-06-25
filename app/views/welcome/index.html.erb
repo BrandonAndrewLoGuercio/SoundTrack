@@ -5,16 +5,20 @@
     <title>SoundTrack</title>
   </head>
   <body>
-    <div class="container-fluid">
+  <div class="jumbotron" id="background">
+
+
+  <div class="container-fluid">
       <% if !user_signed_in? %>
         <div class="jumbotron">
           <h1>Create your SoundTrack</h1>
-          <p>words and stuff and shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
+          <p>Music and filler words and stuff and shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
           <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-info btn-block" %></p>
           <p><%= link_to 'Sign in', new_user_session_path, class: "btn btn-primary btn-block" %></p>
         </div>
       <% end %>
     </div>
+
 
   <div class="container">
     <% if user_signed_in? %>
@@ -31,6 +35,7 @@
   <% else %>
     <!--<%= render 'landingpage' %>-->
   <% end %>
+  </div>
   </div>
   </body>
 </html>
