@@ -21,6 +21,7 @@ body {
   height: 100%;
   padding-top: 50px;
   margin-bottom: 0;
+  background-color: #151515;
 }
 .search {
   margin-top: 20px;
@@ -36,28 +37,28 @@ body {
 
 /* footer */
 
-footer {
-  background-color: #222222;
-  margin: -10px 0 -10px 0;
-  border-top: 2px solid #eaeaea;
-  color: #000000;
+#footer {
+  border-top: 2px solid #aaaeb1;
+  background-color: #cbd0d3;
+  margin: 0 0 -15px 0;
+  padding-top: 5px;
 }
-footer a {
+#footer a {
   color: #222222;
 }
-footer a:hover {
+#footer a:hover {
   color: #27868b;
 }
-footer small {
+#footer small {
   float: left;
   font-size: 15px;
 }
-footer ul {
+#footer ul {
   float: right;
   list-style: none;
 };
 
-footer ul li {
+#footer ul li {
   float: left;
   margin-left: 20px;
 }
@@ -73,8 +74,8 @@ footer ul li {
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
 }
-.jumbotron#background2{
-  background: url("musicbackground.png") no-repeat center center;
+.container#background2{
+  background: url("music.png") no-repeat center center;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
