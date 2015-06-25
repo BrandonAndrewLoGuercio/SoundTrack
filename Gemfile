@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise'
+# Carrierwave and Rmagick used to upload an avatar for each user
 gem 'carrierwave'
 gem 'rmagick'
 # Use jquery as the JavaScript library
@@ -52,4 +53,6 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
 end
