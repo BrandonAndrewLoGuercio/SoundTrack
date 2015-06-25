@@ -6,10 +6,6 @@ Rails.application.routes.draw do
   match('/following', {via: :get, to: "following#index"})
   match('/followers', {via: :get, to: "followers#index"})
 
-  # For yourub
-  get 'videos/index'
-  post 'videos/index'
-  get 'videos/:id' => 'videos#details', as: :details
 
 
   match('relationship/:follower_id/:following_id', {via: :delete, to: "relationships#destroy_via_users", as: "destroy_users_relationship"})
@@ -27,6 +23,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
 
   # Example resource route with options:
   #   resources :products do
