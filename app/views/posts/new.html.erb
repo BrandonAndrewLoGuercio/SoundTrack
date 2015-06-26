@@ -1,27 +1,10 @@
-
-<div class="container-fluid">
-  <% if !user_signed_in? %>
-      <div class="jumbotron">
-        <h1>Sign in sucka!</h1>
-        <p>words and stuff and shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
-        <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-block" %></p>
-        <p><%= link_to 'Sign in', new_user_session_path, class: "btn btn-info btn-block" %></p>
-      </div>
-  <% end %>
-</div>
+<iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/videoID" frameborder="0" allowfullscreen></iframe>
 
 
-
-<% if user_signed_in? %>
-
-  <div class="container">
-    <h1>New Post</h1>
-
-    <%= render 'form' %>
-
-    <%= link_to 'Back', posts_path %>
-<% end %>
-  </div>
-
-
-
+<form action="/post" method="post">
+  <input id="post_title" type="hidden" name="post[title]" value="">
+  <input id="post_desc" type="hidden" name="post[description]" value="">
+  <input id="post_videoid" type="hidden" name="post[video_id]" value="">
+  <input id="post_userid" type="hidden" name="post[user_id]" value="">
+  <button>Submit</button>
+</form>

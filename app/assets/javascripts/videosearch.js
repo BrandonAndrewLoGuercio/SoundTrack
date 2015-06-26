@@ -1,11 +1,19 @@
+function init() {
+    gapi.client.setApiKey("AIzaSyDtxYNoD2Gfb89yy9CkcMOj2U31k8EEPCQ");
+    gapi.client.load("youtube", "v3", function () {
+        // yt api is ready
+    });
+}
+
 function getfilledYouTubeTemplate(title, videoID) {
     var result = $(document.getElementById('youtube_template')).find('div').clone()
     result.find('h2').html(title)
     result.find('iframe').attr('src', '//www.youtube.com/embed/' + videoID)
     return result
 }
+
 $(function () {
-    $("form").on("submit", function (e) {
+    $("#video_search").on("submit", function (e) {
         e.preventDefault();
         // prepare the request
         var request = gapi.client.youtube.search.list({
@@ -35,9 +43,3 @@ function resetVideoHeight() {
     $(".video").css("height", $("#results").width() * 9 / 16);
 }
 
-function init() {
-    gapi.client.setApiKey("AIzaSyDtxYNoD2Gfb89yy9CkcMOj2U31k8EEPCQ");
-    gapi.client.load("youtube", "v3", function () {
-        // yt api is ready
-    });
-}
