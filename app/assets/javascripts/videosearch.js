@@ -9,6 +9,10 @@ function getfilledYouTubeTemplate(title, videoID) {
     var result = $(document.getElementById('youtube_template')).find('div').clone()
     result.find('h2').html(title)
     result.find('iframe').attr('src', '//www.youtube.com/embed/' + videoID)
+    result.find('#vid_id').attr('value', videoID)
+    result.find('#vid_tit').attr('value', title)
+
+
     return result
 }
 

@@ -1,10 +1,15 @@
-<iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/videoID" frameborder="0" allowfullscreen></iframe>
+<h3><%= params[:video_title] %></h3>
+<iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= params[:video_id] %>" frameborder="0" allowfullscreen></iframe>
 
 
-<form action="/post" method="post">
-  <input id="post_title" type="hidden" name="post[title]" value="">
-  <input id="post_desc" type="hidden" name="post[description]" value="">
-  <input id="post_videoid" type="hidden" name="post[video_id]" value="">
-  <input id="post_userid" type="hidden" name="post[user_id]" value="">
+<form action="/posts" method="post">
+  <input id="post_video_title" type="hidden" name="post[title]" value="<%= params[:video_title] %>">
+  <input id="post_videoid" type="hidden" name="post[video_id]" value="<%= params[:video_id] %>">
+  <input id="post_userid" type="hidden" name="post[user_id]" value="<%= current_user.id %>">
+  <label for="post_title">Post Title</label><br>
+  <input id="post_title" type="text" name="post[post_title]"><br>
+  <label for="post_description">Description</label><br>
+  <input id="post_description" type="text" name="post[description]"><br>
+
   <button>Submit</button>
 </form>
