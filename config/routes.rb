@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :posts
   devise_for :users
   resources :users
   resources :relationships
   match('/following', {via: :get, to: "following#index"})
   match('/followers', {via: :get, to: "followers#index"})
+  resources :posts
 
 
 
