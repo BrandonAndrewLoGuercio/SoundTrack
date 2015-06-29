@@ -16,8 +16,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="search"><%= render 'shared/search' %></li>
         <% if user_signed_in? %>
-        <!--<li class="post"><%= link_to 'New Post', new_post_path %></li>-->
-        <li><%= link_to "My Orchestra", following_path %></li>
+          <!--<li class="post"><%= link_to 'New Post', new_post_path %></li>-->
+          <li><%= link_to "My Orchestra", following_path %></li>
             <li role="presentation" class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <%= image_tag current_user.avatar_url(:nav) %><span class="caret"></span>
@@ -29,12 +29,12 @@
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
+              <% else %>
+               <li><%= link_to "Sign-in", user_session_path %></li>
               <% end %>
             </li>
-        <% else %>
-        <li><%= link_to "Sign-in", user_session_path %></li>
+          <!--<li><%= link_to "Sign-in", user_session_path %></li>-->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
