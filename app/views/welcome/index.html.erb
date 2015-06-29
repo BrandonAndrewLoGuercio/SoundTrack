@@ -24,7 +24,7 @@
   <div class="container">
     <% if user_signed_in? %>
       <%= render 'welcome/homefeed' %>
-      <%= image_tag current_user.avatar_url.to_s  %><br><br>
+      <%= image_tag current_user.avatar_url  %><br><br>
       <h3>Welcome back <%= current_user.username %>!</h3>
       <ul>
         <li><%= link_to 'Follow People', users_path %></li>
