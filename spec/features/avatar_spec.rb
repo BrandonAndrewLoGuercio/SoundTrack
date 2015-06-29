@@ -24,7 +24,9 @@
     # end
 
 #     context 'the updated version' do
-#         it "update user's avatar when it's updated on the account settings page"
+#         it "updates user's avatar when it's updated on the account settings page" do
+#       end
+#     end
 
 #
 #   context 'the profile version' do
@@ -33,7 +35,7 @@
 #     end
 #   end
 #
-#   context 'the NAV version' do
+#   context 'the nav version' do
 #     it "should scale down a landscape image to be exactly 35 by 35 pixels" do
 #       @uploader.nav.should be_no_larger_than(35, 35)
 #     end

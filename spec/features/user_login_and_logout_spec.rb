@@ -17,7 +17,7 @@ describe "the signup process" do
     fill_in 'user[password_confirmation]', with: 'password1'
     click_button 'Sign up'
     expect(current_path).to eq root_path
-    expect(page).to have_content 'Welcome back'
+    expect(page).to have_content 'New Post'
     expect(page).to_not have_content 'Log in'
   end
 end
