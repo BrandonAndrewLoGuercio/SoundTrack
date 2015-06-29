@@ -16,16 +16,23 @@
 #     MyUploader.enable_processing = false
 #     @uploader.remove!
 #   end
+
+    # context 'the default version' do
+    #   it "should give user default avatar when user does not upload an avatar" do
+    #
+    #   end
+    # end
+
 #
 #   context 'the thumb version' do
-#     it "should scale down a landscape image to be exactly 64 by 64 pixels" do
-#       @uploader.thumb.should have_dimensions(64, 64)
+#     it "should scale down a landscape image to be exactly 50 by 50 pixels" do
+#       @uploader.thumb.should have_dimensions(50, 50)
 #     end
 #   end
 #
-#   context 'the small version' do
-#     it "should scale down a landscape image to fit within 200 by 200 pixels" do
-#       @uploader.small.should be_no_larger_than(200, 200)
+#   context 'the NAV version' do
+#     it "should scale down a landscape image to fit within 35 by 35 pixels" do
+#       @uploader.small.should be_no_larger_than(35, 35)
 #     end
 #   end
 #
