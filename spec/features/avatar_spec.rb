@@ -27,14 +27,14 @@
 #         it "update user's avatar when it's updated on the account settings page"
 
 #
-#   context 'the thumb version' do
-#     it "should scale down a landscape image to be exactly 50 by 50 pixels" do
-#       @uploader.thumb.should have_dimensions(50, 50)
+#   context 'the profile version' do
+#     it "should scale an  image to be exactly 225 by 225 pixels" do
+#       @uploader.thumb.should have_dimensions(225, 225)
 #     end
 #   end
 #
 #   context 'the NAV version' do
-#     it "should scale down a landscape image to fit within 35 by 35 pixels" do
+#     it "should scale down a landscape image to be exactly 35 by 35 pixels" do
 #       @uploader.nav.should be_no_larger_than(35, 35)
 #     end
 #   end
