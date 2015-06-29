@@ -16,6 +16,13 @@ ActiveRecord::Schema.define(version: 20150626185855) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "follows", force: :cascade do |t|
+    t.integer  "following"
+    t.integer  "follower"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "headlines", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "headline"
