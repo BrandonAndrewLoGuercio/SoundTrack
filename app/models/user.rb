@@ -38,6 +38,10 @@ class User < ActiveRecord::Base
     followers.include? user
   end
 
+  User.find_each do |user|
+    user.avatar.recreate_versions! if user.avatar?
+  end
+
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)

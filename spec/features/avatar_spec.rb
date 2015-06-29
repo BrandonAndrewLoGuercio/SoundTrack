@@ -19,9 +19,12 @@
 
     # context 'the default version' do
     #   it "should give user default avatar when user does not upload an avatar" do
-    #
+    #     @uploader.should be eq. to 'default.png'
     #   end
     # end
+
+#     context 'the updated version' do
+#         it "update user's avatar when it's updated on the account settings page"
 
 #
 #   context 'the thumb version' do
@@ -32,9 +35,15 @@
 #
 #   context 'the NAV version' do
 #     it "should scale down a landscape image to fit within 35 by 35 pixels" do
-#       @uploader.small.should be_no_larger_than(35, 35)
+#       @uploader.nav.should be_no_larger_than(35, 35)
 #     end
 #   end
+
+  # context 'removing an uploaded avatar' do
+  #   it 'should be the default avatar if user elects to remove their avatar' do
+  #
+  #   end
+  # end
 #
 #   it "should make the image readable only to the owner and not executable" do
 #     @uploader.should have_permissions(0600)
