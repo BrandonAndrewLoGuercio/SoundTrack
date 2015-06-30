@@ -30,10 +30,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  # User.find_each do |user|
-  #   user.avatar.recreate_versions! if user.avatar?
-  # end
-
   # Create different versions of your uploaded files:
   # process :resize_to_fill => [250, 250]
 
@@ -61,6 +57,13 @@ class AvatarUploader < CarrierWave::Uploader::Base
   def filename
     "avatar.jpg" if original_filename
   end
+
+  # if Rails.env.test? or Rails.env.cucumber?
+  #   CarrierWave.configure do |config|
+  #     config.storage = :file
+  #     config.enable_processing = false
+  #   end
+  # end
 
 
 end
