@@ -4,11 +4,10 @@ class WelcomeController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order(created_at: :desc)
-    @follower_relationships = Relationship.where(following_id: current_user).all
-    @following_relationships = Relationship.where(follower_id: current_user).all
-    @headline = Headline.find_by(user_id: current_user.id) if user_signed_in?
-
+    @follower_count = current_user.followers.count
+    @following_count = current_user.followings.count
+    @posts = current_user.followings_posts
+    @headline = current_user.headline
   end
 
   # GET /posts/1
