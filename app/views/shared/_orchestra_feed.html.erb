@@ -9,7 +9,7 @@
           <%= post.created_at.to_formatted_s(:long) %>
           <iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>
           Description: <%= post.description %><br>
-          <%= render "shared/comments" %>
+          <%= render post.comments %>
         </li>
     <% end %>
   </ul>
