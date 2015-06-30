@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :followers, through: :followed_through, source: :follower
   has_many :followings, through: :follower_through, source: :following
+  has_many :followings_posts, through: :followings, source: :posts
 
   has_one :headline
 

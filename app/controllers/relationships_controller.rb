@@ -1,6 +1,5 @@
 class RelationshipsController < ApplicationController
   def create
-    # @user = User.find(params[:id])
     Relationship.create relationship_params
     redirect_to :back
   end
