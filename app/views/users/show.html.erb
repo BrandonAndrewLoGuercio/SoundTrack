@@ -1,6 +1,9 @@
 <h1><%= @user.username %></h1>
 
-<%= image_tag @user.avatar_url.to_s  %><br><br>
+<%= image_tag @user.avatar_url(:profile)  %><br><br>
+
+<%= render "shared/orchestra_feed" %>
+
 
 <ul>
     <li><%= link_to 'Back to home page', root_path %></li>

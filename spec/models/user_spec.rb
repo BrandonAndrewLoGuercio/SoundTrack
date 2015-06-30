@@ -30,13 +30,13 @@ RSpec.describe User, type: :model do
     expect {@user2.save!}.not_to raise_error
   end
 
-  it 'validates presence of password' do
-    @user.password = nil
-    expect {@user.save!}.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Password can't be blank")
-
-    @user.password = "password1"
-    expect(@user.password).to eq("password1")
-  end
+  # it 'validates presence of password' do
+  #   @user.password = nil
+  #   expect {@user.save!}.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Password can't be blank")
+  #
+  #   @user.password = "password1"
+  #   expect(@user.password).to eq("password1")
+  # end
 
   it 'validates length of password to be at least 8 characters' do
     @user.password = 'abc'
