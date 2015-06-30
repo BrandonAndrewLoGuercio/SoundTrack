@@ -10,7 +10,8 @@ FactoryGirl.define do
     # before each :post do
     #   @user = create(:user)
     # end
-    sequence(:message) { |n| "post#{n}" }
+    # add video_id and title
+    sequence(:description) { |n| "description#{n}" }
     # user_id @user
   end
 end

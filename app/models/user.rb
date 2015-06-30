@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
   validates :username, presence: true, uniqueness: {case_sensitive: false}
-  validates :password, presence: true
+  # validates :password, presence: true
   mount_uploader :avatar, AvatarUploader
 
   def login
@@ -36,6 +36,10 @@ class User < ActiveRecord::Base
 
   def followed_by(user)
     followers.include? user
+  end
+
+  User.find_each do |user|
+    user.avatar.recreate_versions! if user.avatar?
   end
 
   def self.find_for_database_authentication(warden_conditions)

@@ -44,11 +44,17 @@
 <div class="container">
   <div class="fb-profile">
     <img align="left" class="fb-image-lg" src="http://lorempixel.com/850/280/nightlife/5/" alt="Profile image example"/>
-    <img align="left" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example"/>
-    <div class="fb-profile-text">
-      <h1><%= current_user.username %></h1>
-      <p><%= render @headline if @headline %></p>
-    </div>
+    <!-- Fix to show actual profile image instead of placeholder-->
+    <!--<img align="left" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example"/>-->
+        <!--<div class="fb-image-profile thumbnail">-->
+            <%= link_to image_tag(current_user.avatar_url(:profile)), user_path(current_user) %>
+        <!--</div>-->
+            <div class="fb-profile-text">
+              <h1><%= current_user.username %></h1>
+              <p><%= render @headline if @headline %></p>
+              <p><%= link_to 'Follow People', users_path %></p>
+
+            </div>
   </div>
 </div> <!-- /container -->
 <div class="container">
