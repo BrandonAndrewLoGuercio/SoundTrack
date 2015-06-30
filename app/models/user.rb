@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
   validates :username, presence: true, uniqueness: {case_sensitive: false}
-  # validates :password, presence: true
+  validates :password, presence: true, on: create
   mount_uploader :avatar, AvatarUploader
 
   def login
