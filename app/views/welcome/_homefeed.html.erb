@@ -55,23 +55,14 @@
   <section class="stats">
     <%= render 'shared/stats' %>
   </section>
-
-  <div id="main_feed" class="col-sm-8">
-    <h1 class="lead">Orchestra Feed</h1>
-
-    <ul>
-      <% @posts.each do |post| %>
-          <li>
-            <%= post.post_title %><br>
-            <iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>
-            <%= post.description %>
-          </li>
-      <% end %>
-    </ul>
-
-  </div>
 </div>
+
+<%= render "shared/orchestra_feed" %>
+
 </div>
+
+
+
 </body>
 <div class="container">
   <hr>
