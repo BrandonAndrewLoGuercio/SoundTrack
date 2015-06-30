@@ -6,6 +6,7 @@
         <li>
           <%= link_to post.user.username, user_path(post.user.id) %>
           <%= post.post_title %>
+          <%= post.created_at.to_formatted_s(:long) %>
           <iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>
           Description: <%= post.description %><br><br>
         </li>
