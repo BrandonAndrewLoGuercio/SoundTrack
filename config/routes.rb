@@ -7,10 +7,6 @@ Rails.application.routes.draw do
   match('/following', {via: :get, to: "following#index"})
   match('/followers', {via: :get, to: "followers#index"})
 
-  # For yourub
-  get 'videos/index'
-  post 'videos/index'
-  get 'videos/:id' => 'videos#details', as: :details
 
 
   # devise_scope :user do

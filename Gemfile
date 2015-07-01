@@ -26,8 +26,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-# Allows us to search for videos in app
-gem 'yourub', '~> 1.0.5'
 
 gem 'google-api-client'
 # Use ActiveModel has_secure_password
@@ -55,4 +53,6 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
 end

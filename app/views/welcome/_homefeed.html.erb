@@ -3,66 +3,69 @@
 </head>
 
 
-<nav class="navbar navbar-inverse">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">SoundTrack</a>
-    </div>
+<!--<nav class="navbar navbar-inverse">-->
+  <!--<div class="container">-->
+    <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+    <!--<div class="navbar-header">-->
+      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">-->
+        <!--<span class="sr-only">Toggle navigation</span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+      <!--</button>-->
+      <!--<a class="navbar-brand" href="#">SoundTrack</a>-->
+    <!--</div>-->
 
-    <div class="collapse navbar-collapse" id="navbar-collapse-4">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Orchestra</a></li>
-        <li>
-          <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse4" aria-expanded="false" aria-controls="nav-collapse4">Profile <i class=""></i> </a>
-        </li>
-      </ul>
-      <ul class="collapse nav navbar-nav nav-collapse slide-down" role="search" id="nav-collapse4">
-        <li><a href="#">My Notes</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img class="img-circle" src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/11046283_10206742303539054_7827783586494601632_n.jpg?oh=c1b1130869d8713df9faa77851c0bfd1&oe=55FE9330" alt="maridlcrmn" width="20" /> Brandon L.<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">My profile</a></li>
-            <li><a href="#">Favorited</a></li>
-            <li><a href="#">Settings</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container -->
-</nav><!-- /.navbar -->
+    <!--<div class="collapse navbar-collapse" id="navbar-collapse-4">-->
+      <!--<ul class="nav navbar-nav navbar-right">-->
+        <!--<li><a href="#">Home</a></li>-->
+        <!--<li><a href="#">Orchestra</a></li>-->
+        <!--<li>-->
+          <!--<a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse4" aria-expanded="false" aria-controls="nav-collapse4">Profile <i class=""></i> </a>-->
+        <!--</li>-->
+      <!--</ul>-->
+      <!--<ul class="collapse nav navbar-nav nav-collapse slide-down" role="search" id="nav-collapse4">-->
+        <!--<li><a href="#">My Notes</a></li>-->
+        <!--<li class="dropdown">-->
+          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img class="img-circle" src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/11046283_10206742303539054_7827783586494601632_n.jpg?oh=c1b1130869d8713df9faa77851c0bfd1&oe=55FE9330" alt="maridlcrmn" width="20" /> Brandon L.<span class="caret"></span></a>-->
+          <!--<ul class="dropdown-menu" role="menu">-->
+            <!--<li><a href="#">My profile</a></li>-->
+            <!--<li><a href="#">Favorited</a></li>-->
+            <!--<li><a href="#">Settings</a></li>-->
+            <!--<li class="divider"></li>-->
+            <!--<li><a href="#">Logout</a></li>-->
+          <!--</ul>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+  <!--</div>&lt;!&ndash; /.container &ndash;&gt;-->
+<!--</nav>&lt;!&ndash; /.navbar &ndash;&gt;-->
 
 <div class="container">
   <div class="fb-profile">
     <img align="left" class="fb-image-lg" src="http://lorempixel.com/850/280/nightlife/5/" alt="Profile image example"/>
-    <img align="left" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example"/>
-    <div class="fb-profile-text">
-      <h1><%= current_user.username %></h1>
-      <p><%= render @headline if @headline %></p>
-    </div>
+    <!-- Fix to show actual profile image instead of placeholder-->
+    <!--<img align="left" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example"/>-->
+        <!--<div class="fb-image-profile thumbnail">-->
+            <%= link_to image_tag(current_user.avatar_url(:profile)), user_path(current_user) %>
+        <!--</div>-->
+            <div class="fb-profile-text">
+              <h1><%= current_user.username %></h1>
+              <p><%= render @headline if @headline %></p>
+              <p><%= link_to 'Follow People', users_path %></p>
+
+            </div>
   </div>
 </div> <!-- /container -->
 <div class="container">
   <section class="stats">
     <%= render 'shared/stats' %>
   </section>
+</div>
 
-  <div class="col-sm-8">
-    <h1 class="lead">Orchestra Feed</h1>
+<%= render "shared/orchestra_feed" %>
 
-    <!--<div class="row">-->
-      <!--<div class="embed-responsive embed-responsive-16by9">-->
-        <!--<iframe width="560" height="315" src="//www.youtube.com/embed/xYYXK09NZOg" allowfullscreen></iframe>-->
-      <!--</div>-->
+</div>
 
     <!--</div>-->
 
@@ -94,43 +97,23 @@
   <hr>
 </div>
 
-<%= form_tag videos_index_path, :method => :post do %>
-    <div>
-      <%= label_tag "search for:" %>
-      <%= text_field_tag "query" %>
-    </div>
-    <div>
-      <%= label_tag "order by date" %>
-      <%= radio_button_tag 'order', 'date' %>
-      <%= label_tag "order by rating" %>
-      <%= radio_button_tag 'order', 'rating' %>
-      <%= label_tag "order by relevance" %>
-      <%= radio_button_tag 'order', 'relevance' %>
-      <%= label_tag "order by title" %>
-      <%= radio_button_tag 'order', 'title' %>
-      <%= label_tag "order by videocount" %>
-      <%= radio_button_tag 'order', 'videocount' %>
-      <%= label_tag "order by viewcount" %>
-      <%= radio_button_tag 'order', 'viewcount' %>
-    </div>
-    <div>
-      <%= submit_tag "Submit" %>
-    </div>
-<% end %>
-<% if @videos %>
-    <h2>Found results:</h2>
-    <% @videos.each do |v| %>
-        <div>
-          <div> <%= link_to v["title"], details_path(:id =>v["id"]) %> </div>
-          <!--%iframe{:allowscriptaccess => "always", :allowFullScreen => "true", |-->
-          <!--:frameborder => "0", :height => "430", :src => "//www.youtube.com/embed/#{v["id"]}", |-->
-          <!--:title => "YouTube video player", :width => "640"}-->
-          <iframe width="420" height="315"
-                  src="//www.youtube.com/embed/<%= v["id"] %>">
 
-          </iframe>
-        </div>
-        <% end %>
-<% end %>
-    <%# content_tag(:iframe, '', src: v.url,
-                    width: 560, height: 315, frameborder: 0) %>
+
+<!--Video search box-->
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form id="video_search" action="#">
+      <p><input type="text" id="vid_search" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
+      <p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+    </form>
+    <div id="results"></div>
+  </div>
+</div>
+
+
+
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<%= javascript_include_tag "videosearch" %>
+<script src="https://apis.google.com/js/client.js?onload=init"></script>
+<%= render partial: 'shared/youtube_template.html.erb' %>
