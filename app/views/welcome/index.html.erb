@@ -13,6 +13,11 @@
           <p>Music and filler words and stuff and shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
           <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-info btn-block" %></p>
           <p><%= link_to 'Sign in', new_user_session_path, class: "btn btn-primary btn-block" %></p>
+          <p>
+            <%= link_to user_omniauth_authorize_path(:facebook) do %>
+                <%= image_tag "facebook_button.png" %>
+            <% end %>
+          </p>
         </div>
       <% end %>
     </div>
@@ -20,8 +25,8 @@
      </div>
 
   <div class="container">
-    <h1><%= current_user.username %></h1>
     <% if user_signed_in? %>
+        <h1><%= current_user.username %></h1>
         <%= render 'welcome/homefeed' %>
         <!-- Stuff below is repetitive from 'welcome/homefeed' and just shows up at bottom of homepage, commented out for now-->
         <!--<p><%= image_tag current_user.avatar_url(:profile) %></p>-->
@@ -35,14 +40,15 @@
           <!--<li><%= link_to 'Follow People', users_path %></li>-->
 
         </ul>
-    <% else %>
-        <ul>
-          <li><%= link_to 'Sign up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign in', new_user_session_path %></li>
-          <%= link_to user_omniauth_authorize_path(:facebook) do %>
-              <%= image_tag "facebook_button.png" %>
-          <% end %>
-        </ul>
+        <!-- More repetitive stuff -->
+    <!--<% else %>
+        <!--<ul>-->
+          <!--<li><%= link_to 'Sign up', new_user_registration_path %></li>-->
+          <!--<li><%= link_to 'Sign in', new_user_session_path %></li>-->
+          <!--<%= link_to user_omniauth_authorize_path(:facebook) do %>-->
+              <!--<%= image_tag "facebook_button.png" %>-->
+          <!--<% end %>-->
+        <!--</ul>-->
     <% end %>
   </div>
   </div>

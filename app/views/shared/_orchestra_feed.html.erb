@@ -9,7 +9,7 @@
               <%= link_to post.user.username, user_path(post.user.id) %>
               <%= post.post_title %>
               <div class="embed-responsive embed-responsive-16by9">
-                <iframe id="new_post_vid" class="embed-responsive-item" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>
+                <iframe id="new_post_vid" class="embed-responsive-item" src="//www.youtube.com/embed/<%= post.video_id %>" allowfullscreen></iframe><br>
               <!--<iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>-->
               </div>
               Description: <%= post.description %><br><br>
