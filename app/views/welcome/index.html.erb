@@ -20,7 +20,7 @@
      </div>
 
   <div class="container">
-    <h1>SoundTrack!</h1>
+    <h1><%= current_user.username %></h1>
     <% if user_signed_in? %>
         <%= render 'welcome/homefeed' %>
         <!-- Stuff below is repetitive from 'welcome/homefeed' and just shows up at bottom of homepage, commented out for now-->
