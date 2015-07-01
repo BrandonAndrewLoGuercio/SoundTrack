@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :relationships
   match('/following', {via: :get, to: "following#index"})
   match('/followers', {via: :get, to: "followers#index"})
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
 
 

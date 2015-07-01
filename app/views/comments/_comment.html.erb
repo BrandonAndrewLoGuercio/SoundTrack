@@ -1,6 +1,5 @@
 <div id="comment">
-    <h4>Comments:</h4>
-    <%= link_to comment.user.username, user_path(comment.user.id) %><br>
-    <%= comment.created_at.to_formatted_s(:long) %>
+    <%= link_to comment.user.username, user_path(comment.user.id) %>
+    <%= comment.created_at.to_formatted_s(:long) if comment.created_at %><br>
     <%= comment.comment %><br><br>
 </div>
