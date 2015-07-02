@@ -1,4 +1,5 @@
-<% c = post.comments.build
+<% c = Comment.new
+   c.post_id = post.id
     c.user = post.user %>
 
   <%=  form_for [post, c]  do |f| %>
