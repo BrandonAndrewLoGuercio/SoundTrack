@@ -1,11 +1,12 @@
 <!--<div class="container">-->
   <div class="fb-profile">
     <div class="col-md-3" role="complimentary">
-     <%= link_to image_tag(@user.avatar_url(:profile)), user_path(@user) %>
-    <!--</div>-->
+      <div class="icon text-center"
+        <%= link_to image_tag(@user.avatar_url(:profile), :class=> "style-image", :alt=> "User profile"), user_path(@user) %>
+      </div>
         <div class="fb-profile-text">
-        <h2><%= @user.username %></h2>
-        <h6><%= @user.headline %></h6>
+        <h2 class="text-center"><%= @user.username %></h2>
+        <h6 class="text-center"><%= @user.headline %></h6>
         <!--<p><%= link_to 'Follow People', users_path %></p>-->
 
         </div>

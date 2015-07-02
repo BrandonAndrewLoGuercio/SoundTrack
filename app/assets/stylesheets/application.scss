@@ -26,9 +26,12 @@ body {
   margin-top: 16px;
 }
 
-
 .post {
   margin-top: 5px;
+}
+
+.orchestra {
+  margin-top: 12px
 }
 
 .navbar-brand {
@@ -63,13 +66,11 @@ body {
   margin-left: 20px;
 }
 .jumbotron {
-  background: #ffffff; /* This is for ie8 and below */
   background: #ffffff;
 }
-
+//
 //.jumbotron#stats {
-//  background: #ffffff; /* This is for ie8 and below */
-//  background: #ffffff;
+//  background: #000000;
 //}
 //
 //.jumbotron#feed {
