@@ -1,9 +1,11 @@
 <div class="container"></div>
     <h1><%= @user.username %></h1>
     <%= image_tag @user.avatar_url(:profile)  %><br><br>
-
+    <section class="stats">
+      <%= render 'shared/stats' %>
+      <%= follow_or_unfollow_button @user %>
+    </section>
     <%= render "shared/orchestra_feed" %>
-    <%= follow_or_unfollow_button @user %>
 
 </div>
     <ul>

@@ -10,6 +10,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @follower_count = @user.followers.count
+    @following_count = @user.followings.count
     @posts = Post.where(user_id: current_user).order(created_at: :desc)
 
   end
