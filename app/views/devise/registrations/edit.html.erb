@@ -36,6 +36,11 @@
       <%= f.email_field :email, autofocus: true %>
     </div>
 
+      <div class="field">
+        <%= f.label :headline %><br />
+        <%= f.text_field :headline %>
+      </div>
+
     <div class="field">
       <%= f.label :avatar, "Please upload a picture to be used as avatar" %><br>
       <%= f.file_field :avatar %>

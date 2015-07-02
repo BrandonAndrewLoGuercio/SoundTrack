@@ -30,6 +30,11 @@
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
+      <div class="field">
+        <%= f.label :headline %><br />
+        <%= f.text_field :headline, autofocus: true %>
+      </div>
+
     <div class="field">
       <%= f.label :avatar, "Please upload a picture to be used as avatar" %><br>
       <%= f.file_field :avatar %>

@@ -17,8 +17,9 @@
 
 body {
   height: 100%;
-  padding-top: 50px;
-  margin-bottom: 0;
+  padding-top: 70px;
+  padding_bottom: 70px;
+  margin-bottom: 25px;
   background-color: #ADD8E6;
 }
 .search {
@@ -61,9 +62,19 @@ body {
   float: left;
   margin-left: 20px;
 }
-//.jumbotron {
-//  background: rgb(225, 225, 225); /* This is for ie8 and below */
-//  background: rgba(225, 225, 225, 0.5);
+.jumbotron {
+  background: #ffffff; /* This is for ie8 and below */
+  background: #ffffff;
+}
+
+//.jumbotron#stats {
+//  background: #ffffff; /* This is for ie8 and below */
+//  background: #ffffff;
+//}
+//
+//.jumbotron#feed {
+//  background: #ffffff; /* This is for ie8 and below */
+//  background: #ffffff;
 //}
 //
 //.jumbotron#background{
