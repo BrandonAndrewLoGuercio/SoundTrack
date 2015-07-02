@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :admins
+  resources :posts
+  devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   resources :users
   resources :relationships
   match('/following', {via: :get, to: "following#index"})
@@ -9,6 +11,10 @@ Rails.application.routes.draw do
   end
 
 
+
+  # devise_scope :user do
+  #   get 'sign_out', to: 'devise/session#destroy', :as => :destroy_user_session
+  # end
 
   match('relationship/:follower_id/:following_id', {via: :delete, to: "relationships#destroy_via_users", as: "destroy_users_relationship"})
   # The priority is based upon order of creation: first created -> highest priority.
@@ -26,7 +32,6 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
 
   # Example resource route with options:
   #   resources :products do
