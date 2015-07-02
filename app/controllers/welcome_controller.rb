@@ -5,10 +5,11 @@ class WelcomeController < ApplicationController
   # GET /posts.json
   def index
     if current_user
-      @follower_count = current_user.followers.count
-      @following_count = current_user.followings.count
-      @posts = current_user.followings_posts
-      @headline = current_user.headline
+      @user = current_user
+      @follower_count = @user.followers.count
+      @following_count = @user.followings.count
+      @posts = @user.followings_posts
+      @headline = @user.headline
     end
   end
 
