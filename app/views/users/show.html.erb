@@ -1,4 +1,4 @@
-<div class="container"></div>
+<div class="container">
     <h1><%= @user.username %></h1>
     <%= image_tag @user.avatar_url(:profile)  %><br><br>
     <section class="stats">
@@ -7,7 +7,7 @@
     </section>
     <%= render "shared/orchestra_feed" %>
 
-</div>
     <ul>
         <li><%= link_to 'Back to home page', root_path %></li>
     </ul>
+</div>
