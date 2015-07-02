@@ -14,6 +14,7 @@ class PostsController < ApplicationController
 
 
   def new
+    # @user = User.find(params[:user_id])
     @post = Post.new
   end
 
@@ -31,6 +32,11 @@ class PostsController < ApplicationController
 
 
   def destroy
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Post was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private

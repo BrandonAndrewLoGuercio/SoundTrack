@@ -1,15 +1,29 @@
-<h3><%= params[:video_title] %></h3>
-<iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= params[:video_id] %>" frameborder="0" allowfullscreen></iframe>
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- should render 'shared/user_sidebar'-->
+
+<h2 class="text-center">Finish Creating Your Post Below</h2>
+<div class="col-md-6 col-md-offset-3 text-center">
+  <h3><%= params[:video_title] %></h3>
+  <iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= params[:video_id] %>" frameborder="0" allowfullscreen></iframe>
 
 
-<form action="/posts" method="post">
-  <input id="post_video_title" type="hidden" name="post[title]" value="<%= params[:video_title] %>">
-  <input id="post_videoid" type="hidden" name="post[video_id]" value="<%= params[:video_id] %>">
-  <input id="post_userid" type="hidden" name="post[user_id]" value="<%= current_user.id %>">
-  <label for="post_title">Post Title</label><br>
-  <input id="post_title" type="text" name="post[post_title]"><br>
-  <label for="post_description">Description</label><br>
-  <input id="post_description" type="text" name="post[description]"><br>
+  <form action="/posts" method="post" class="form-group">
+    <input id="post_video_title" type="hidden" name="post[title]" value="<%= params[:video_title] %>">
+    <input id="post_videoid" type="hidden" name="post[video_id]" value="<%= params[:video_id] %>">
+    <input id="post_userid" type="hidden" name="post[user_id]" value="<%= current_user.id %>">
+    <label for="post_title">Post Title</label><br>
+    <input id="post_title" type="text" class="form-control" name="post[post_title]"><br>
+    <label for="post_description">Description</label><br>
+    <input id="post_description" type="text" class="form-control" name="post[description]"><br>
 
-  <button>Submit</button>
-</form>
+    <button>Submit</button>
+  </form>
+
+</div>
+
+</body>
