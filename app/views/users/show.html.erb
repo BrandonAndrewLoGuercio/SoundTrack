@@ -1,10 +1,11 @@
-<h1><%= @user.username %></h1>
+<div class="container"></div>
+    <h1><%= @user.username %></h1>
+    <%= image_tag @user.avatar_url(:profile)  %><br><br>
 
-<%= image_tag @user.avatar_url(:profile)  %><br><br>
+    <%= render "shared/orchestra_feed" %>
+    <%= follow_or_unfollow_button @user %>
 
-<%= render "shared/orchestra_feed" %>
-
-
-<ul>
-    <li><%= link_to 'Back to home page', root_path %></li>
-</ul>
+</div>
+    <ul>
+        <li><%= link_to 'Back to home page', root_path %></li>
+    </ul>
