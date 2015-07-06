@@ -12,9 +12,9 @@
               <%= post.post_title %><br>
               <%= post.created_at.to_formatted_s(:long) %>
               <iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>
-              Description: <%= post.description %><br>
+              Description: <%= post.description %>
               <% if post.user == current_user %>
-                  <button type="button" class="btn btn-danger"><%= link_to 'Remove Post', [post], method: :delete, data: { confirm: 'Are you sure?' } %></button>
+                  | <%= link_to 'Remove Post', [post], method: :delete, data: { confirm: 'Are you sure?' } %>
               <% end %>
               <%= render partial: "shared/comment_form", locals: {post: post} %>
               <% unless post.comments.empty? %>

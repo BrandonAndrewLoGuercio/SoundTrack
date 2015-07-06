@@ -14,7 +14,6 @@ class PostsController < ApplicationController
 
 
   def new
-    # @user = User.find(params[:user_id])
     @post = Post.new
   end
 
@@ -23,7 +22,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
-    redirect_to '/'
+      redirect_to '/'
   end
 
 
@@ -50,3 +49,4 @@ class PostsController < ApplicationController
     params.require(:post).permit!
   end
 end
+

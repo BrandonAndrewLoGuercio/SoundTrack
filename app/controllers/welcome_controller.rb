@@ -75,6 +75,6 @@ class WelcomeController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params[:post].permit(:message)
+    params.require(:post).permit!
   end
 end
