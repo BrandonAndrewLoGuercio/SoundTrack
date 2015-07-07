@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :create
 
 
-
   def index
     @posts = Post.all
   end
@@ -23,7 +22,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
-    redirect_to '/'
+      redirect_to '/'
   end
 
 
@@ -32,6 +31,11 @@ class PostsController < ApplicationController
 
 
   def destroy
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Post was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
@@ -45,3 +49,4 @@ class PostsController < ApplicationController
     params.require(:post).permit!
   end
 end
+

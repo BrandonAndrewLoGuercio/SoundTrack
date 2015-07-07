@@ -5,10 +5,11 @@ class WelcomeController < ApplicationController
   # GET /posts.json
   def index
     if current_user
-      @follower_count = current_user.followers.count
-      @following_count = current_user.followings.count
-      @posts = current_user.followings_posts
-      @headline = current_user.headline
+      @user = current_user
+      @follower_count = @user.followers.count
+      @following_count = @user.followings.count
+      @posts = @user.followings_posts.order("created_at DESC")
+      @headline = @user.headline
     end
   end
 
@@ -74,6 +75,6 @@ class WelcomeController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params[:post].permit(:message)
+    params.require(:post).permit!
   end
 end

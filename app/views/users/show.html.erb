@@ -1,10 +1,15 @@
-<h1><%= @user.username %></h1>
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
 
-<%= image_tag @user.avatar_url(:profile)  %><br><br>
+<body>
+
+<%= render "shared/user_sidebar" %>
 
 <%= render "shared/orchestra_feed" %>
 
+</body>
 
-<ul>
-    <li><%= link_to 'Back to home page', root_path %></li>
-</ul>
+<!--<ul>-->
+    <!--<li><%= link_to 'Back to home page', root_path %></li>-->
+<!--</ul>-->
