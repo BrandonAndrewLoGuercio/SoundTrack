@@ -22,23 +22,12 @@
   <div class="container">
     <h1>SoundTrack!</h1>
     <% if user_signed_in? %>
-        <% if false && current_user.avatar.present? #TODO when avtar is working  %>
+        <% if false && current_user.avatar.present? #TODO when avatar is working  %>
             <%= image_tag current_user.avatar_url.to_s %><br><br>
         <% end %>
-        <h3>Welcome back
-          <% current_user.username %>!</h3>
+
+          <% current_user.username %>
         <%= render 'welcome/homefeed' %>
-        <%= image_tag current_user.avatar_url.to_s %><br><br>
-
-        <h3>Welcome back <%= current_user.username %>!</h3>
-        <ul>
-          <li><%= link_to 'Submit post', new_post_path %></li>
-          <li><%= link_to 'Edit account settings', edit_user_registration_path %></li>
-          <li><%= link_to 'Edit Account Settings', edit_user_registration_path %></li>
-          <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
-          <li><%= link_to 'Follow People', users_path %></li>
-
-        </ul>
     <% else %>
         <ul>
           <li><%= link_to 'Sign up', new_user_registration_path %></li>

@@ -1,7 +1,10 @@
-<h3><%= params[:video_title] %></h3>
-<iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= params[:video_id] %>" frameborder="0" allowfullscreen></iframe>
+<div class="container-fluid"> <h3><%= params[:video_title] %></h3>
 
+  <iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= params[:video_id] %>" frameborder="0" allowfullscreen></iframe>
 
+</div>
+
+<div class="container-fluid">
 <form action="/posts" method="post">
   <input id="post_video_title" type="hidden" name="post[title]" value="<%= params[:video_title] %>">
   <input id="post_videoid" type="hidden" name="post[video_id]" value="<%= params[:video_id] %>">
@@ -13,3 +16,4 @@
 
   <button>Submit</button>
 </form>
+    </div>
