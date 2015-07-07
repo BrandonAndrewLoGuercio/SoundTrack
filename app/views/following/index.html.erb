@@ -9,9 +9,14 @@
 
 <h1>People You're Following</h1>
 <% if user_signed_in? %>
+<!--This isn't working on mine. Get error "undefined method `username' for nil:NilClass"-->
   <% @following_relationships.each do |following| %>
     <ul>
-      <li><%= link_to following.following.username, '/' %></li>
+<<<<<<< HEAD
+      <li><%= link_to following.following.username, user_path(following.following_id) %></li>
+=======
+      <li><%= link_to following.following.username, user_path(following.following) %></li>
+>>>>>>> master
     </ul>
   <% end %>
 <% else %>

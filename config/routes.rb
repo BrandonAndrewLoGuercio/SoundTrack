@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :admins
-  resources :posts
   devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
-  resources :users
+  resources :users do
+    get :followers, on: :member
+    get :following, on: :member
+  end
   resources :relationships
   match('/following', {via: :get, to: "following#index"})
   match('/followers', {via: :get, to: "followers#index"})

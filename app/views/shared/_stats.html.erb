@@ -1,14 +1,35 @@
 <%# @user ||= current_user %>
+
 <div class="stats">
-  <a href="/following">
-    <span>Following:</span>
-    <strong><%= @following_count %></strong>
+  <% if @user %>
+      <%= link_to following_user_path(@user) do %>
+        <span>Following:</span>
+        <strong><%= @following_count %></strong>
+      <% end %>
+
+      <%= link_to followers_user_path(@user) do %>
+        <span>Followers:</span>
+        <strong><%= @follower_count %></strong>
+      <% end %>
+  <% else %>
+      <a href="/following">
+          <span>Following:</span>
+          <strong><%= @following_count %></strong>
+      </a>
+
+      <a href="/followers">
+        <span>Followers:</span>
+        <strong><%= @follower_count %></strong>
+      </a>
+      <% end %>
+
+  <a href="/users/<%= @user.id %>">
+    <span>Posts:</span>
+    <strong><%= @user.posts.count %></strong>
   </a>
 
-
-  <a href="/followers">
-    <span>Followers:</span>
-    <strong><%= @follower_count %></strong>
-  </a>
+  <!--<follow_or_unfollow_button @user %>-->
 
 </div>
+
+

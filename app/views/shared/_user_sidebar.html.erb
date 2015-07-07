@@ -1,0 +1,28 @@
+<!--<div class="container">-->
+  <div class="fb-profile">
+    <div class="col-md-3" role="complimentary">
+      <div class="icon text-center">
+        <%= link_to image_tag(@user.avatar_url(:profile), :class=> "style-image", :alt=> "User profile"), user_path(@user) %>
+      </div>
+        <div class="fb-profile-text">
+        <h2 class="text-center"><%= @user.username %></h2>
+        <h6 class="text-center"><%= @user.headline %></h6>
+
+        <!--<p><%= link_to 'Follow People', users_path %></p>-->
+
+        </div>
+          <div class="container">
+            <section class="stats">
+              <%= render 'shared/stats' %>
+            </section>
+          </div><br/>
+      <div class="follow-button">
+        <% if @user != current_user %>
+            <%=  follow_or_unfollow_button @user %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<!--</div> &lt;!&ndash; /container &ndash;&gt;-->
+
