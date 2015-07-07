@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
       @user = current_user
       @follower_count = @user.followers.count
       @following_count = @user.followings.count
-      @posts = @user.followings_posts.order("created_at DESC")
+      @posts = (current_user.followings_posts + current_user.posts).sort{|a, b| b.created_at <=> a.created_at}
       @headline = @user.headline
     end
   end
