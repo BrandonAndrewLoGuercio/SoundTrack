@@ -2,100 +2,24 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
+<body>
 
-<!--<nav class="navbar navbar-inverse">-->
-  <!--<div class="container">-->
-    <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
-    <!--<div class="navbar-header">-->
-      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">-->
-        <!--<span class="sr-only">Toggle navigation</span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-      <!--</button>-->
-      <!--<a class="navbar-brand" href="#">SoundTrack</a>-->
-    <!--</div>-->
 
-    <!--<div class="collapse navbar-collapse" id="navbar-collapse-4">-->
-      <!--<ul class="nav navbar-nav navbar-right">-->
-        <!--<li><a href="#">Home</a></li>-->
-        <!--<li><a href="#">Orchestra</a></li>-->
-        <!--<li>-->
-          <!--<a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse4" aria-expanded="false" aria-controls="nav-collapse4">Profile <i class=""></i> </a>-->
-        <!--</li>-->
-      <!--</ul>-->
-      <!--<ul class="collapse nav navbar-nav nav-collapse slide-down" role="search" id="nav-collapse4">-->
-        <!--<li><a href="#">My Notes</a></li>-->
-        <!--<li class="dropdown">-->
-          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img class="img-circle" src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/11046283_10206742303539054_7827783586494601632_n.jpg?oh=c1b1130869d8713df9faa77851c0bfd1&oe=55FE9330" alt="maridlcrmn" width="20" /> Brandon L.<span class="caret"></span></a>-->
-          <!--<ul class="dropdown-menu" role="menu">-->
-            <!--<li><a href="#">My profile</a></li>-->
-            <!--<li><a href="#">Favorited</a></li>-->
-            <!--<li><a href="#">Settings</a></li>-->
-            <!--<li class="divider"></li>-->
-            <!--<li><a href="#">Logout</a></li>-->
-          <!--</ul>-->
-        <!--</li>-->
-      <!--</ul>-->
-    <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
-  <!--</div>&lt;!&ndash; /.container &ndash;&gt;-->
-<!--</nav>&lt;!&ndash; /.navbar &ndash;&gt;-->
-
-<div class="container">
-  <div class="fb-profile">
-    <img align="left" class="fb-image-lg" src="http://lorempixel.com/850/280/nightlife/5/" alt="Profile image example"/>
-    <!-- Fix to show actual profile image instead of placeholder-->
-    <!--<img align="left" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example"/>-->
-        <!--<div class="fb-image-profile thumbnail">-->
-            <%= link_to image_tag(current_user.avatar_url(:profile)), user_path(current_user) %>
-        <!--</div>-->
-            <div class="fb-profile-text">
-              <h1><%= current_user.username %></h1>
-              <p><%= render @headline if @headline %></p>
-              <p><%= link_to 'Follow People', users_path %></p>
-
-            </div>
-  </div>
-</div> <!-- /container -->
-<div class="container">
-  <section class="stats">
-    <%= render 'shared/stats' %>
-  </section>
-</div>
+<%= render "shared/user_sidebar" %>
 
 <%= render "shared/orchestra_feed" %>
 
-</div>
-
-    <!--</div>-->
-
-    <!--<div class="row">-->
-
-      <!--<div class="embed-responsive embed-responsive-16by9">-->
-        <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/cjPyvoLXPs4" allowfullscreen></iframe>-->
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="row">-->
-      <!--<div class="embed-responsive embed-responsive-16by9">-->
-        <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/pZ8137_YnkY" allowfullscreen></iframe>-->
-      <!--</div>-->
-    <!--</div>-->
-
-  </div>
-</div>
-</div>
 </body>
-<div class="container">
-  <hr>
-  <div class="text-center center-block">
-    <a href="https://www.facebook.com/bootsnipp"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
-    <a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
-    <a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
-    <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
-  </div>
-  <hr>
-</div>
+<!--<div class="container">-->
+  <!--<hr>-->
+  <!--<div class="text-center center-block">-->
+    <!--<a href="https://www.facebook.com/bootsnipp"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>-->
+    <!--<a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>-->
+    <!--<a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>-->
+    <!--<a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>-->
+  <!--</div>-->
+  <!--<hr>-->
+<!--</div>-->
 
 
 
