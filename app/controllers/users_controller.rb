@@ -15,4 +15,14 @@ class UsersController < ApplicationController
     @posts = Post.where(user_id: current_user).order(created_at: :desc)
 
   end
+
+  def following
+    @user = User.find(params[:id])
+    @following = Relationship.where(follower_id: @user.id).all
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @followers = Relationship.where(following_id: @user.id).all
+  end
 end
