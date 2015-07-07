@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
     if current_user
       @follower_count = current_user.followers.count
       @following_count = current_user.followings.count
-      @posts = current_user.followings_posts
+      @posts = (current_user.followings_posts + current_user.posts).sort{|a, b| a.created_at <=> b.created_at}
       @headline = current_user.headline
     end
   end
