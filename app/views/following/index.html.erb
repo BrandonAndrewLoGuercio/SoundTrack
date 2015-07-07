@@ -5,6 +5,8 @@
   <title>SoundTrack</title>
 </head>
 <body>
+<div class="container">
+
 <h1>People You're Following</h1>
 <% if user_signed_in? %>
   <% @following_relationships.each do |following| %>
@@ -17,5 +19,6 @@
 <% end %>
 
 <%= link_to 'Home', root_path %>
+</div>
 </body>
 </html>
