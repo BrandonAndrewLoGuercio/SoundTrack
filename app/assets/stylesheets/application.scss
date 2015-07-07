@@ -17,17 +17,21 @@
 
 body {
   height: 100%;
-  padding-top: 50px;
-  margin-bottom: 0;
-  background-color: #151515;
+  padding-top: 70px;
+  padding_bottom: 70px;
+  margin-bottom: 25px;
+  background-color: #ADD8E6;
 }
 .search {
   margin-top: 16px;
 }
 
-
 .post {
   margin-top: 5px;
+}
+
+.orchestra {
+  margin-top: 12px
 }
 
 .navbar-brand {
@@ -62,24 +66,32 @@ body {
   margin-left: 20px;
 }
 .jumbotron {
-  background: rgb(225, 225, 225); /* This is for ie8 and below */
-  background: rgba(225, 225, 225, 0.5);
+  background: #ffffff;
 }
-
-.jumbotron#background{
-  background: url("music.png") no-repeat center center;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-}
-.container#background2{
-  background: url("music.png") no-repeat center center;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-}
+//
+//.jumbotron#stats {
+//  background: #000000;
+//}
+//
+//.jumbotron#feed {
+//  background: #ffffff; /* This is for ie8 and below */
+//  background: #ffffff;
+//}
+//
+//.jumbotron#background{
+//  background: url("music.png") no-repeat center center;
+//  -webkit-background-size: 100% 100%;
+//  -moz-background-size: 100% 100%;
+//  -o-background-size: 100% 100%;
+//  background-size: 100% 100%;
+//}
+//.container#background2{
+//  background: url("music.png") no-repeat center center;
+//  -webkit-background-size: 100% 100%;
+//  -moz-background-size: 100% 100%;
+//  -o-background-size: 100% 100%;
+//  background-size: 100% 100%;
+//}
 
 .navlinks {
   padding-top: 5px;

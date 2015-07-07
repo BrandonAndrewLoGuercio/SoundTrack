@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :followings_comments, through: :followings_posts, source: :comments
 
-  has_one :headline
+  # has_one :headline
 
   attr_accessor :login
 
