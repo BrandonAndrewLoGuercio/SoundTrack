@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
   # GET /posts.json
   def index
     if current_user
+      @user = current_user
       @follower_count = current_user.followers.count
       @following_count = current_user.followings.count
       @posts = (current_user.followings_posts + current_user.posts).sort{|a, b| b.created_at <=> a.created_at}

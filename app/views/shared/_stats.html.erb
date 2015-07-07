@@ -7,8 +7,6 @@
         <strong><%= @following_count %></strong>
       <% end %>
 
-<<<<<<< HEAD
-
       <%= link_to followers_user_path(@user) do %>
         <span>Followers:</span>
         <strong><%= @follower_count %></strong>
@@ -24,18 +22,14 @@
         <strong><%= @follower_count %></strong>
       </a>
       <% end %>
-</div>
-=======
-  <a href="/followers">
-    <span>Followers:</span>
-    <strong><%= @follower_count %></strong>
-  </a>
 
   <a href="/users/<%= @user.id %>">
     <span>Posts:</span>
     <strong><%= @user.posts.count %></strong>
   </a>
 
+  <!--<follow_or_unfollow_button @user %>-->
+
 </div>
 
->>>>>>> master
+
