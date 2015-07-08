@@ -28,6 +28,9 @@ body {
 .post {
   margin-top: 5px;
 }
+.navbar {
+  border-radius: 5px;
+}
 
 .navbar-brand {
   margin-top: 8px;
@@ -67,4 +70,14 @@ body {
 .form-group {
   width:80%;
 
+}
+#jumbo {
+  margin-top: 40px;
+  border-radius: 5px;
+}
+#centered {
+  padding-left: 50px;
+}
+li {
+  list-style-type: none;
 }
