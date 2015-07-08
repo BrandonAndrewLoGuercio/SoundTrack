@@ -2,28 +2,35 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<body>
+<div class="container">
+  <div class="fb-profile">
+            <%= link_to image_tag(current_user.avatar_url(:profile)), user_path(current_user) %>
+        <!--</div>-->
+            <div class="fb-profile-text">
+              <h1><%= current_user.username %></h1>
+              <p><%= render @headline if @headline %></p>
+              <p><%= link_to 'Follow People', users_path %></p>
 
-
-<%= render "shared/user_sidebar" %>
+            </div>
+  </div>
+</div> <!-- /container -->
+<div class="container">
+  <section class="stats">
+    <%= render 'shared/stats' %>
+  </section>
+</div>
 
 <%= render "shared/orchestra_feed" %>
 
+</div>
+
+  </div>
+</div>
+</div>
 </body>
-<!--<div class="container">-->
-  <!--<hr>-->
-  <!--<div class="text-center center-block">-->
-    <!--<a href="https://www.facebook.com/bootsnipp"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>-->
-    <!--<a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>-->
-    <!--<a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>-->
-    <!--<a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>-->
-  <!--</div>-->
-  <!--<hr>-->
-<!--</div>-->
-
-
 
 <!--Video search box-->
+<div class="container-fluid">
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <form id="video_search" action="#">
@@ -33,7 +40,17 @@
     <div id="results"></div>
   </div>
 </div>
-
+</div>
+<div class="container">
+  <hr>
+  <div class="text-center center-block">
+    <a href="https://www.facebook.com"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+    <a href="https://twitter.com"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+    <a href="https://plus.google.com"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+    <a href="mailto:"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+  </div>
+  <hr>
+</div>
 
 
 <!-- scripts -->

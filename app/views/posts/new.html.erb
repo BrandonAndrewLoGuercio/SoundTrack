@@ -1,23 +1,19 @@
-<!-- should render 'shared/user_sidebar'-->
+<div class="container-fluid"> <h3><%= params[:video_title] %></h3>
 
-<div class="col-md-6 col-md-offset-3 text-center">
-    <h2 class="text-center">Finish Creating Your Post Below</h2>
-      <h3><%= params[:video_title] %></h3>
-      <iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= params[:video_id] %>" frameborder="0" allowfullscreen></iframe>
+  <iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= params[:video_id] %>" frameborder="0" allowfullscreen></iframe>
 
+</div>
 
-      <%=  form_for @post do |f| %>
-          <div class="form-group">
-            <%= f.hidden_field :title, value: params[:video_title] %>
-            <%= f.hidden_field :video_id, value: params[:video_id] %>
-            <%= f.hidden_field :user_id, value: current_user.id %>
+<div class="container-fluid">
+<form action="/posts" method="post">
+  <input id="post_video_title" type="hidden" name="post[title]" value="<%= params[:video_title] %>">
+  <input id="post_videoid" type="hidden" name="post[video_id]" value="<%= params[:video_id] %>">
+  <input id="post_userid" type="hidden" name="post[user_id]" value="<%= current_user.id %>">
+  <label for="post_title">Post Title</label><br>
+  <input id="post_title" type="text" name="post[post_title]"><br>
+  <label for="post_description">Description</label><br>
+  <input id="post_description" type="text" name="post[description]"><br>
 
-            <%= f.label :post_title, "Post Title" %>
-            <%= f.text_field :post_title %><br>
-            <%= f.label :description, "Description" %>
-            <%= f.text_field :description %><br><br>
-            <%= f.submit(class: "btn btn-primary") %>
-          </div>
-      <% end %>
-
+  <button>Submit</button>
+ </form>
 </div>
