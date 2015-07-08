@@ -1,12 +1,9 @@
-<!--<!DOCTYPE html>-->
-<!--<html>-->
+
   <head>
-    <meta charset="utf-8">
     <title>SoundTrack</title>
   </head>
   <body>
     <div class="container-fluid">
-    <div class="jumbotron">
       <% if !user_signed_in? %>
           <h2>Create your SoundTrack</h2>
           <p></p>
@@ -29,7 +26,5 @@
     <% else %>
         <%= render 'landingpage' %>
     <% end %>
-  </div>
 
   </body>
-<!--</html>-->
