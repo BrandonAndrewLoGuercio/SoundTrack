@@ -1,3 +1,5 @@
 $(document).on "page:change", ->
-  $('#comments').click ->
-    $('#comments-section').toggle()
+  $('#comments-link').click (event) ->
+    event.preventDefault()
+    $('#comments-section').fadeToggle()
+    $('#comment_comment').focus()
