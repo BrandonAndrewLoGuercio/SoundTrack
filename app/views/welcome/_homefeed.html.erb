@@ -24,6 +24,18 @@
 </div>
 </div>
 
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-5 ">
+    <form id="video_search" action="#">
+      <p><input type="text" id="vid_search" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
+      <p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+    </form>
+    <div id="results"></div>
+  </div>
+</div>
+</div>
+
 <div class="row">
   <div class="col-sm-6">
   <%= render "shared/orchestra_feed" %>
@@ -36,17 +48,6 @@
 </body>
 
 <!--Video search box-->
-<div class="container-fluid">
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <form id="video_search" action="#">
-      <p><input type="text" id="vid_search" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
-      <p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
-    </form>
-    <div id="results"></div>
-  </div>
-</div>
-</div>
 <div class="container">
   <hr>
   <div class="text-center center-block">
