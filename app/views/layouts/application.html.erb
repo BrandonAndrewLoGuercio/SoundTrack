@@ -13,11 +13,11 @@
 
 <div class="container jumbotron">
   <div class="row">
-
     <%= render 'shared/navigation' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
-
+    <div class="col-md-offset-1">
+        <%= yield %>
+        <%= render 'shared/footer' %>
+    </div>
   </div>
 </div>
 
