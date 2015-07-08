@@ -16,11 +16,15 @@
               <% if post.user == current_user %>
                   | <%= link_to 'Remove Post', [post], method: :delete, data: { confirm: 'Are you sure?' } %>
               <% end %>
-              <%= render partial: "shared/comment_form", locals: {post: post} %>
               <% unless post.comments.empty? %>
-                <h4>Comments:</h4><br>
-                <%= render post.comments %>
+                  <% if post.comments.count != 1 %>
+                    <h4><%= post.comments.count %> Comments:</h4><br>
+                  <% else %>
+                      <h4><%= post.comments.count %> Comment:</h4><br>
+                      <% end %>
+                  <%= render post.comments %>
               <% end %>
+              <%= render partial: "shared/comment_form", locals: {post: post} %>
             </li>
         <% end %>
       </ul>

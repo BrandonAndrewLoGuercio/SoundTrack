@@ -1,6 +1,11 @@
 <div id="comment">
-    <!--<%= image_tag comment.user.avatar_url(:thumb) %>-->
+    <%= image_tag comment.user.avatar_url(:thumb) %>
     <%= link_to comment.user.username, user_path(comment.user.id) %>
     <%= comment.created_at.to_formatted_s(:long) if comment.created_at %><br>
     <%= comment.comment %><br><br>
+  <!--
+  <% if comment.user == current_user || comment.post.user == current_user %>
+      | <%= link_to 'Remove Comment', [comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  -->
 </div>

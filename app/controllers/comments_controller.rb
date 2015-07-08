@@ -5,6 +5,14 @@ class CommentsController < ApplicationController
     redirect_to :back
   end
 
+  def destroy
+    @comment.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Comment was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
   private
 
   def comment_params
