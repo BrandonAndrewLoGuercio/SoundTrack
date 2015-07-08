@@ -30,8 +30,11 @@ body {
 }
 .navbar {
   border-radius: 5px;
+  background-color: rgba(90, 90, 90, 0.32);
 }
-
+.navlinks {
+  color: #d34836;
+}
 .navbar-brand {
   margin-top: 8px;
 }
@@ -72,7 +75,7 @@ body {
 
 }
 #jumbo {
-  margin-top: 40px;
+  margin-top: 17px;
   border-radius: 5px;
 }
 #centered {
