@@ -24,4 +24,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @followers = Relationship.where(following_id: @user.id).all
   end
+
+  def new_notifications
+
+  end
 end

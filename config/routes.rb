@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users do
     get :followers, on: :member
     get :following, on: :member
+    get :new_notifications, on: :member
   end
   resources :relationships
   match('/following', {via: :get, to: "following#index"})
