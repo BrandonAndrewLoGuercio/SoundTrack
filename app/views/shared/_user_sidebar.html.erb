@@ -7,6 +7,7 @@
         <div class="fb-profile-text">
         <h2 class="text-center"><%= @user.username %></h2>
         <h6 class="text-center"><%= @user.headline %></h6>
+
         <!--<p><%= link_to 'Follow People', users_path %></p>-->
 
         </div>
@@ -14,7 +15,12 @@
             <section class="stats">
               <%= render 'shared/stats' %>
             </section>
-          </div>
+          </div><br/>
+      <div class="follow-button">
+        <% if @user != current_user %>
+            <%=  follow_or_unfollow_button @user %>
+        <% end %>
+      </div>
     </div>
   </div>
 

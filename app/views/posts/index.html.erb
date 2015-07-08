@@ -9,7 +9,7 @@
           <div class="container">
           <tr>
             <div class="container">
-              <hr><td><%= post.description %></td></hr>
+              <hr><td><%= post.message %></td></hr>
             </div>
 
             <td><a class="btn icon-btn btn-info"<%= link_to 'Show', post %></a></td>
@@ -23,5 +23,14 @@
         <br>
         <a class="btn icon-btn btn-success" <%= link_to'New Post', new_post_path%> </a>
       </div>
-  </body>
+  </div>
 
+        <div class="container">
+    <div class="text-center center-block">
+      <a href="https://www.facebook.com"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+      <a href="https://twitter.com"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+      <a href="https://plus.google.com"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+      <a href="mailto:"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+    </div>
+  </div>
+  </body>

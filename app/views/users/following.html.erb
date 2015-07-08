@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SoundTrack</title>
+</head>
+<body>
+<h1>People <%= @user.username %> is Following</h1>
+<% if user_signed_in? %>
+    <% @following.each do |following| %>
+        <ul>
+          <li><%= link_to following.following.username, user_path(following.following_id) %></li>
+          <%= link_to image_tag(following.following.avatar_url(:profile)), user_path(following.following_id) %>
+
+        </ul>
+    <% end %>
+<% else %>
+    <%= render :back %>
+<% end %>
+
+<%= link_to 'Home', root_path %>
+</body>
+</html>
