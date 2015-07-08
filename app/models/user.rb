@@ -105,8 +105,6 @@ class User < ActiveRecord::Base
 
     comments = followers_comments.where("comments.created_at > ?", self.last_notified)
 
-
-    comments
   end
 
 
