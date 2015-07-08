@@ -10,6 +10,8 @@
     <% @following.each do |following| %>
         <ul>
           <li><%= link_to following.following.username, user_path(following.following_id) %></li>
+          <%= link_to image_tag(following.following.avatar_url(:profile)), user_path(following.following_id) %>
+
         </ul>
     <% end %>
 <% else %>
