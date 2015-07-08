@@ -2,12 +2,10 @@
 <div id="feed">
 
   <ul>
-    <h1 class="lead">Orchestra Feed</h1>
+    <h1 class="lead">My Feed</h1>
 
     <% @posts.each do |post| %>
         <li>
-          <h2><%= link_to post.user.username, user_path(post.user.id) %></h2>
-
           <h3><%= post.post_title %></h3>
           <%= post.created_at.to_formatted_s(:long) %>
           <iframe id="new_post_vid" class="video w100" width="480" height="344" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>
