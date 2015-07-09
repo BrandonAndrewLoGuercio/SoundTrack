@@ -1,10 +1,10 @@
 
-<div id="feed">
+<div id="myfeed">
 
   <ul>
-    <h1 class="lead">My Feed</h1>
+    <center><h2>My Feed</h2></center>
 
-    <% @posts.each do |post| %>
+    <% @myposts.each do |post| %>
         <li>
           <h3><%= post.post_title %></h3>
           <%= post.created_at.to_formatted_s(:long) %>

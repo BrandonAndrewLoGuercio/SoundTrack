@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   match('relationship/:follower_id/:following_id', {via: :delete, to: "relationships#destroy_via_users", as: "destroy_users_relationship"})
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  get 'my_posts', to: 'posts#my_posts'
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
