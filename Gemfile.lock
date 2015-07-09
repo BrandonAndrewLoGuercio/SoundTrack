@@ -42,7 +42,7 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
-    autoprefixer-rails (5.2.1)
+    autoprefixer-rails (5.2.0)
       execjs
       json
     bcrypt (3.1.10)
@@ -56,8 +56,6 @@ GEM
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
     builder (3.2.2)
-    byebug (5.0.0)
-      columnize (= 0.9.0)
     cancan (1.6.10)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -78,7 +76,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
-    columnize (0.9.0)
     debug_inspector (0.0.2)
     devise (3.5.1)
       bcrypt (~> 3.0)
@@ -261,9 +258,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   better_errors
   bootstrap-sass (~> 3.3.4.1)
-  byebug
   cancan
   capybara
   carrierwave

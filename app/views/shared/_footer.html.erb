@@ -5,9 +5,10 @@
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About", '/' %></li>
-      <li><%= link_to "Stuff", '/' %></li>
-      <li><%= link_to "More Stuff", '/' %></li>
+      <li><%= link_to 'Submit post', new_post_path %></li>
+      <li><%= link_to 'Edit account settings', edit_user_registration_path %></li>
+      <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+      <li><%= link_to 'Follow People', users_path %></li>
     </ul>
   </nav>
     </div>
