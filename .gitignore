@@ -13,5 +13,7 @@
 /tmp
 .idea
 config/database.yml
+public/uploads/user/avatar/*
+
 *~
 .DS_Store

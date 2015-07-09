@@ -5,18 +5,27 @@
   <title>SoundTrack</title>
 </head>
 <body>
-<h1>People You're Following</h1>
-<% if user_signed_in? %>
-<!--This isn't working on mine. Get error "undefined method `username' for nil:NilClass"-->
-  <% @following_relationships.each do |following| %>
-    <ul>
-      <li><%= link_to following.following.username, user_path(following.following) %></li>
-    </ul>
-  <% end %>
-<% else %>
-    <%= render :back %>
-<% end %>
+<div class="container-fluid">
+  <div class="jumbotron">
 
+    <%= link_to image_tag(current_user.avatar_url(:profile)), user_path(current_user) %>
+</div>
+  <div class="jumbotron">
+  <h1>Your Orchestra</h1>
+
+    <% if user_signed_in? %>
+    <% @following_relationships.each do |following| %>
+
+            <%= link_to following.following.username, user_path(following.following) %>
+            <%= link_to image_tag(following.following.avatar_url(:profile)), user_path(following.following_id) %>
+
+    <% end %>
+  <% else %>
+      <%= render :back %>
+  <%end %>
+    </div>
+</div>
 <%= link_to 'Home', root_path %>
+
 </body>
 </html>
