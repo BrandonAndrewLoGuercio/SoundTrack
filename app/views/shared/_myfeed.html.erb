@@ -4,7 +4,7 @@
   <ul>
     <h1 class="lead">My Feed</h1>
 
-    <% @posts.each do |post| %>
+    <% @myposts.each do |post| %>
         <li>
           <h3><%= post.post_title %></h3>
           <%= post.created_at.to_formatted_s(:long) %>
