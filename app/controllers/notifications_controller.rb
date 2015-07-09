@@ -12,16 +12,8 @@ class NotificationsController < ApplicationController
     end
   end
 
-  def update
-    current_user.update_attribute(:last_notified, Time.now)
-    # @user = User.find(current_user)
-    # @user.update_attributes(user_params)
-
-  end
-
   def get_notifications
     @comments = current_user.get_notifications
-
   end
 
   private

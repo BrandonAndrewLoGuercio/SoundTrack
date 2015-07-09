@@ -1,3 +1,4 @@
+//updates the notification_count div with the new value
 function receive_notification_count(value) {
     $('#notification_count').html(value)
 }
