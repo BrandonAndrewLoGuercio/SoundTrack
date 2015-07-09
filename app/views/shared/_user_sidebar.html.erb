@@ -11,16 +11,16 @@
 
         <!--<p><%= link_to 'Follow People', users_path %></p>-->
 
-        </div>
-          <div class="container">
-            <section class="stats">
+
+            <section class="text-center">
               <%= render 'shared/stats' %>
             </section>
-          </div><br/>
+          <br/>
         <% if @user != current_user %>
           <div class="follow-button">
             <%=  follow_or_unfollow_button @user %>
         <% end %>
+        </div>
       </div>
     </div>
   </div>
