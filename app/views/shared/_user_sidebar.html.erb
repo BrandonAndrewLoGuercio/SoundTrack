@@ -16,8 +16,8 @@
               <%= render 'shared/stats' %>
             </section>
           </div><br/>
-      <div class="follow-button">
         <% if @user != current_user %>
+          <div class="follow-button">
             <%=  follow_or_unfollow_button @user %>
         <% end %>
       </div>
