@@ -1,4 +1,5 @@
 
 
-    <%= link_to "Notifications: #{current_user.get_notifications.count}", notifications_path %>
+    <%= link_to "Notifications: <span id='notification_count'>#{current_user.get_notifications.count}</span>".html_safe, notifications_path, id: "notificationBadge",
+                :action => "update" %>
 

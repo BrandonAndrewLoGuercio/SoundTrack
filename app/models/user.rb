@@ -102,9 +102,7 @@ class User < ActiveRecord::Base
   end
 
   def get_notifications
-
     comments = followers_comments.where("comments.created_at > ?", self.last_notified)
-
   end
 
 
