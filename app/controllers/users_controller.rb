@@ -53,3 +53,8 @@ private
   def user_params
     params.require(:user).permit!
   end
+
+  def new_notifications
+
+  end
+end
