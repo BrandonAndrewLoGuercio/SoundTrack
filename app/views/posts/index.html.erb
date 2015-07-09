@@ -9,7 +9,7 @@
           <div class="container">
           <tr>
             <div class="container">
-              <hr><td><%= post.message %></td></hr>
+              <hr><td><%= post.try :message %></td></hr>
             </div>
 
             <td><a class="btn icon-btn btn-info"<%= link_to 'Show', post %></a></td>
