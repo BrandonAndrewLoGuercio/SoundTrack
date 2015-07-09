@@ -82,17 +82,26 @@ body {
 }
 .form-group {
   width:80%;
-
-}
-#jumbo {
-  margin-top: 20px;
-  border-radius: 5px;
 }
 #centered {
   padding-left: 50px;
 }
 li {
   list-style-type: none;
+}
+
+#topcont {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #5e92c0;
+}
+.follow-button {
+  text-align: center;
+}
+.uside-bar {
+  margin-top: 50px;
 }
 .follow-button {
   text-align: center;
