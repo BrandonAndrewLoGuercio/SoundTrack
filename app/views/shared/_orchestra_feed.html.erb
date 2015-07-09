@@ -5,36 +5,9 @@
       <h1 class="lead text-center">Orchestra Feed</h1>
 
       <ul class="list-unstyled">
-        <% @posts.each do |post| %>
-            <li>
-              <%= image_tag post.user.avatar_url(:thumb) %>
-              <%= link_to post.user.username, user_path(post.user.id) %>
-              <%= post.post_title %><br>
-              <%= post.created_at.to_formatted_s(:long) %>
-              <iframe id="new_post_vid" class="video w100" width="640" height="360" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>
-              Description: <%= post.description %>
-              <% if post.user == current_user %>
-                  | <%= link_to 'Remove Post', [post], method: :delete, data: { confirm: 'Are you sure?' } %>
-              <% end %>
-              </li>
 
-            <li>
+        <%= render @posts %>
 
-              <% if post.comments.count != 1 %>
-                  <h5><%= link_to "#{post.comments.count} Comments", "#", id: "comments-link" %></h5><br>
-              <% else %>
-                  <h5><%= link_to "#{post.comments.count} Comment", "#", id: "comments-link" %></h5><br>
-              <% end %>
-
-              <section id="comments-section">
-                <ol id="comments">
-                    <%= render post.comments %>
-                </ol>
-                <%= render partial: "shared/comment_form", locals: {post: post} %>
-              </section>
-
-            </li>
-        <% end %>
       </ul>
     </div>
   <!--</div>-->
