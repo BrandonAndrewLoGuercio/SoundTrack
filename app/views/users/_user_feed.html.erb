@@ -1,7 +1,7 @@
 <div id="feed">
 
   <ul>
-    <h1 class="lead">My Feed</h1>
+    <h1 class="lead"><%= @user.username %>'s Feed</h1>
 
     <% @posts.each do |post| %>
         <li>
