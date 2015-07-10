@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+  resources :notifications
 
+  get '/get_notifications', to: 'notifications#get_notifications'
 
 
   # devise_scope :user do
@@ -23,7 +25,6 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   get 'my_posts', to: 'posts#my_posts'
   # You can have the root of your site routed with "root"
-  get 'welcome/index'
   root 'welcome#index'
 
   # Example of regular route:

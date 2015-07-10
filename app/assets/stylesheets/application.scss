@@ -26,12 +26,18 @@ body {
   margin-bottom: 0;
   background-color: #215078;
 }
+
+.comments-section {
+  display: none;
+}
+
 .search {
   margin-top: 16px;
 }
 .navbar a:hover {
   background-color: #525252 !important;
 }
+
 
 .post {
   margin-top: 5px;
