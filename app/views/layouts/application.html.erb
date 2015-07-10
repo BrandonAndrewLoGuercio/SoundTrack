@@ -9,17 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body data-user-id="<%= current_user.try :id %>">
 
-<div class="container jumbotron">
-  <div class="row">
     <%= render 'shared/navigation' %>
-    <div class="col-md-offset-1">
-        <%= yield %>
-        <%= render 'shared/footer' %>
-    </div>
-  </div>
-</div>
+    <%= yield %>
+    <%= render 'shared/footer' %>
 
 </body>
 </html>

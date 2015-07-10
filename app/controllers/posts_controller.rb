@@ -12,6 +12,11 @@ class PostsController < ApplicationController
   def show
   end
 
+  def my_posts
+    @posts = current_user.posts
+    @user = current_user
+    render 'welcome/index'
+  end
 
   def new
     @post = Post.new
