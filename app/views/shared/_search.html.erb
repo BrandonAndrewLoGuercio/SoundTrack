@@ -1,7 +1,7 @@
 
 <%= form_tag users_path, :method => 'get', :id => 'user_search' do %>
-    <p>
+    <p class="searcher">
       <%= text_field_tag :search, params[:search], placeholder: "Search users" %>
-      <%= submit_tag "Search users", :name => nil %>
+      <%= submit_tag "Go!", :name => nil %>
     </p>
 <% end %>
