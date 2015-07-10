@@ -20,6 +20,7 @@ gem 'better_errors'
 gem 'rmagick'
 gem 'omniauth-facebook'
 gem 'faraday'
+gem 'rollbar', '~> 1.5.3'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.4.1'
 # Use jquery as the JavaScript library
