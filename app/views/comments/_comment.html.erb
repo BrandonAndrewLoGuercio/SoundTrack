@@ -4,3 +4,8 @@
     <%= comment.created_at.to_formatted_s(:long) if comment.created_at %><br>
     <%= comment.comment %><br><br>
 </div>
+  <!--
+  < if comment.user == current_user || comment.post.user == current_user %>
+      | <= link_to 'Remove Comment', [comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+  < end %>
+  -->

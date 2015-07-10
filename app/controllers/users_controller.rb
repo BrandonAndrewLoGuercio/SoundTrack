@@ -45,8 +45,6 @@ class UsersController < ApplicationController
   def delete
     @user = current_user
   end
-end
-
 
 private
 
