@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   has_many :posts_comments, through: :posts, source: :comments
   has_many :comments
   has_many :followings_comments, through: :followings_posts, source: :comments
-  has_many :followers_comments, through: :posts, source: :comments
 
   # has_one :headline
 
@@ -99,10 +98,6 @@ class User < ActiveRecord::Base
         where(username: conditions[:username]).first
       end
     end
-  end
-
-  def get_notifications
-    comments = followers_comments.where("comments.created_at > ?", self.last_notified)
   end
 
 
