@@ -13,10 +13,10 @@
 
 <li>
   <div class="load-comments-container">
-    <% if post.comments.count != 1 %>
-        <h5><%= link_to "#{post.comments.count} Comments", "#", class: "comments-link" %></h5><br>
+    <% if post.comments.count == 0 %>
+        <h5><%= link_to "Write first comment", "#", class: "comments-link" %></h5><br>
     <% else %>
-        <h5><%= link_to "#{post.comments.count} Comment", "#", class: "comments-link" %></h5><br>
+        <h5><%= link_to "Comments", "#", class: "comments-link" %></h5><br>
     <% end %>
 
 
