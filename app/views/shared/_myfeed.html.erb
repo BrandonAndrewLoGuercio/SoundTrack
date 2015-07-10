@@ -1,20 +1,9 @@
 
 <div id="myfeed">
-
+  <center><h2>My Feed</h2></center>
   <ul>
-    <center><h2>My Feed</h2></center>
 
-    <% @myposts.each do |post| %>
-        <li>
-          <h3><%= post.post_title %></h3>
-          <%= post.created_at.to_formatted_s(:long) %>
-          <iframe id="new_post_vid" class="video w100" width="480" height="344" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>
-           <%= post.description %><br>
-          <%= render partial: "shared/comment_form", locals: {post: post} %>
-          <% unless post.comments.empty? %>
-            <%= render post.comments %>
-          <% end %>
-        </li>
-    <% end %>
+    <%= render @myposts %>
+
   </ul>
 </div>

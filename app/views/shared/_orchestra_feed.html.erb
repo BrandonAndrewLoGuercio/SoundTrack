@@ -1,24 +1,10 @@
 
+<!--<center><h2>Orchestra Feed</h2></center>-->
+
+  <!--<ul>-->
 <center><h2>Orchestra Feed</h2></center>
 
   <ul>
-    <h1 class="lead">Orchestra Feed</h1>
-
-  <ul>
-    <% @posts.each do |post| %>
-        <li>
-            <span class="glyphicon glyphicon-user"></span>
-          <%= link_to post.user.username, user_path(post.user.id) %>
-          <%= post.post_title %><br>
-          <%= post.created_at.to_formatted_s(:long) %>
-          <iframe id="new_post_vid" class="video w100" width="460" height="360" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>
-          Description: <%= post.description %><br>
-          <%= render partial: "shared/comment_form", locals: {post: post} %>
-          <% unless post.comments.empty? %>
-            <h4>Comments:</h4><br>
-            <%= render post.comments %>
-          <% end %>
-        </li>
-    <% end %>
+    <%= render @posts %>
   </ul>
 </div>
