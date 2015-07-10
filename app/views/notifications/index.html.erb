@@ -1,0 +1,21 @@
+
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<%= render "shared/user_sidebar" %>
+
+<% @notifications.each do |n| %>
+    <li>
+      <%= n.user.username %> commented on your post "<%= n.post.post_title%>" <%= n.created_at.to_formatted_s(:long) %>: <br>
+      <%= n.comment %>
+    </li>
+<% end %>
+
+</body>
+
+<!--<ul>-->
+<!--<li><%= link_to 'Back to home page', root_path %></li>-->
+<!--</ul>-->

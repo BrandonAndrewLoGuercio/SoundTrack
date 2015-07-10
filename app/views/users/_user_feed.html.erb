@@ -1,0 +1,23 @@
+<div id="feed">
+
+  <ul>
+    <h1 class="lead"><%= @user.username %>'s Feed</h1>
+
+    <!-- Refactored, may have to tweak user page interface to work-->
+    <%= render @posts %>
+
+
+    <!--<% @posts.each do |post| %>-->
+        <!--<li>-->
+          <!--<h3><%= post.post_title %></h3>-->
+          <!--<%= post.created_at.to_formatted_s(:long) %>-->
+          <!--<iframe id="new_post_vid" class="video w100" width="640" height="390" src="//www.youtube.com/embed/<%= post.video_id %>" frameborder="0" allowfullscreen></iframe><br>-->
+          <%= post.description %><br>
+          <!--<= render partial: "shared/comment_form", locals: {post: post} %>-->
+          <!--<% unless post.comments.empty? %>-->
+              <!--<= render post.comments %>-->
+          <!--<% end %>-->
+        <!--</li>-->
+    <!--<% end %>-->
+  </ul>
+</div>

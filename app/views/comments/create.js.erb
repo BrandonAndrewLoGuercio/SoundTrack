@@ -1,0 +1,5 @@
+//debugger
+    var commDiv = $(".<%= "post_#{@post.id}_comments" %>")
+        commDiv.append("<%= j render @comment %>");
+        commDiv.siblings().find('.form-control').val("");
+//        Increase comment count without refreshing page

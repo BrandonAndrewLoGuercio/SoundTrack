@@ -9,11 +9,10 @@
 <% if user_signed_in? %>
     <% @follower_relationships.each do |follower| %>
         <ul>
-<<<<<<< HEAD
+
           <li><%= link_to follower.follower.username, user_path(follower.follower_id) %></li>
-=======
           <li><%= link_to follower.follower.username, user_path(follower.follower)  %></li>
->>>>>>> master
+
         </ul>
     <% end %>
 <% else %>

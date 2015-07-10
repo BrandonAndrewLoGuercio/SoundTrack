@@ -5,9 +5,15 @@
 
 <body>
 
-<%= render "shared/user_sidebar" %>
+    <div class="container"></div>
+      <%= render "shared/user_sidebar" %>
 
-<%= render "shared/orchestra_feed" %>
+      <div class="row">
+        <div class="col-sm-7 col-sm-offset-1">
+          <%= render "user_feed" %>
+        </div>
+      </div>
+    </div>
 
 </body>
 
