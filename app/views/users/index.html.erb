@@ -19,7 +19,9 @@
         <li>
           <%= image_tag user.avatar_url(:thumb) %>
           <%= link_to user.username, user_path(user) %><br/>
-          <%= follow_or_unfollow_button user %>
+          <% if user != current_user %>
+            <%= follow_or_unfollow_button user %>
+          <% end %>
       <% end %>
     </ul>
       </div>
