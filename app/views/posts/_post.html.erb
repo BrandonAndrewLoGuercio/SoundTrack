@@ -18,8 +18,8 @@
         <h5><%= link_to "#{post.comments.count} Comment", "#", class: "comments-link" %></h5><br>
     <% end %>
 
-    <section id="comments-section">
-      <ol id="comments">
+    <section class="comments-section">
+      <ol class="comments">
         <%= render post.comments %>
       </ol>
 

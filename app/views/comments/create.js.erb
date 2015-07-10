@@ -1,2 +1,12 @@
-$('.comments').append("<%= j render @comment %>");
-$('#comment_comment').val("");
+//comments = parent.find('.comments-section > .comments')
+//$('.comments').append("<= j render @comment %>");
+//$('#comment_comment').val("");
+
+
+//$(document).ready(function () {
+//    $('.new-comment').click(function (e) {
+        var comments = $(".new-comment").parent.find('.comments-section > .comments');
+        $(comments).append("<%= j render @comment %>");
+        $((comments).parent.find('.comments-section > .comment_form > .form-group > .form-control')).val("");
+////    });
+////});
