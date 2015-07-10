@@ -56,4 +56,4 @@ private
   def new_notifications
 
   end
- end
+end
