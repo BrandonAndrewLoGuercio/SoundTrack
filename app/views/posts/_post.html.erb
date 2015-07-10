@@ -24,8 +24,9 @@
       <ol class="comments post_<%= post.id %>_comments">
         <%= render post.comments %>
       </ol>
-
-      <%= render partial: "shared/comment_form", locals: {post: post} %>
+      <% if user_signed_in? %>
+        <%= render partial: "shared/comment_form", locals: {post: post} %>
+      <% end %>
 
     </section>
   </div>
