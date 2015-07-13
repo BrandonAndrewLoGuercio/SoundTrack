@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20150708182505) do
 
   create_table "headlines", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "headlines"
+    t.string   "headline"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
