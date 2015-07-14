@@ -4,7 +4,7 @@
 </head>
 
 <body>
-<% if current_user? %>
+<% if user_signed_in? %>
 <%= render "shared/user_sidebar" %>
 
 <% @notifications.each do |n| %>
